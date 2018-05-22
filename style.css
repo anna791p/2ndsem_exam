@@ -72,18 +72,29 @@ transition: all 0.6s;
   transform: rotate(45deg) translate(17px, -14px);
 }
 /*Menu ends*/
-#heroimg{
-    background-image: url(img/bla1.PNG);
-    height: 100vh;
-    background-size: cover;
+video{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    opacity: .5;
 }
-li, h1{
+.front{
+    z-index: 10;
+    position: relative;
+    top:40vh;
+    font-size: 3em;
+}
+
+li, h1, h2{
       font-family: 'alegreya';
 }
 h1{
     text-align: center;
 }
 #recent{
+    position: absolute;
+    top:120vh;
     display: grid;
     grid-template-columns: 1fr;
     margin:10px;
