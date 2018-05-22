@@ -1,6 +1,5 @@
-@font-face{
     @font-face {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'alegreya';
     src: url(fonts/alegreyasans/AlegreyaSansSC-Bold.otf);
 }}
 
@@ -79,7 +78,7 @@ transition: all 0.6s;
     background-size: cover;
 }
 li, h1{
-      font-family: 'Alegreya Sans SC';
+      font-family: 'alegreya';
 }
 h1{
     text-align: center;
