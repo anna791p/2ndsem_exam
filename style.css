@@ -1,7 +1,10 @@
     @font-face {
     font-family: 'alegreya';
     src: url(fonts/alegreyasans/AlegreyaSansSC-Bold.otf);
-}}
+}
+.vid_front{
+    display: none;
+}
 
 /*Menu starts*/
 .deskmenu{
@@ -9,6 +12,7 @@
 
 }
 .logo_black{
+    display: none;
     width: 30%;
     transition: all .3s;
 }
@@ -17,7 +21,7 @@ ul>li{
     list-style-type: none;
     text-transform: uppercase;
     line-height:30px;
-     font-weight: 700;
+     font-weight: 850;
     font-size: 1.3em;
 }
 
@@ -79,11 +83,19 @@ video{
     width: 100vw;
     opacity: .5;
 }
+.logo{
+    width:50vw;
+    position: absolute;
+    left:20vw;
+    top:25vh;
+}
 .front{
     z-index: 10;
     position: relative;
-    top:40vh;
-    font-size: 3em;
+    top:45vh;
+    left:45vw;
+    color:#1C3652;
+    font-size: 5em;
 }
 
 li, h1, h2{
@@ -119,11 +131,14 @@ h1{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #1C3652;
     transition: all 2s;
 }
 
 @media (min-width: 800px)  {
+    .vid_front{
+        display: initial;
+    }
     /***menu starts***/
     .deskmenu{
         display: initial;
@@ -142,7 +157,8 @@ a{
         width: 15%;
     }
     .arrow{
-        top:80vh;
+        position: absolute;
+    top:80vh;
     width: 8vw;
     height: 20vh;
     left: 43vw;
