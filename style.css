@@ -1,6 +1,10 @@
     @font-face {
     font-family: 'alegreya';
-    src: url(fonts/alegreyasans/AlegreyaSansSC-Bold.otf);
+        src: url(fonts/alegreyasans/AlegreyaSans-Bold.otf);}
+     @font-face {font-family: 'jaapokki';
+        src: url(fonts/jaapokki/regular/jaapokki-regular.otf)}
+    @font-face{font-family: 'jaapokki enhance';
+    src: url(fonts/jaapokki/enchance/Jaapokkienchance-Regular.otf);
 }
 .vid_front{
     display: none;
@@ -17,7 +21,7 @@
     transition: all .3s;
 }
 ul>li{
-
+letter-spacing: 1.5px;
     list-style-type: none;
     text-transform: uppercase;
     line-height:30px;
@@ -90,17 +94,22 @@ video{
     top:25vh;
 }
 .front{
+    display: inline;
     z-index: 10;
     position: relative;
-    top:45vh;
+    top:50vh;
     left:45vw;
-    color:#000;
-    font-size: 5em;
+    color:#1C3652;
+    font-size: 4em;
 }
 
-li, h1, h2{
-      font-family: 'alegreya';
+li,h2, h1{
+      font-family: 'jaapokki';
 }
+/*h2{
+    font-family: 'jaapokki enhance';
+
+}*/
 h1{
     text-align: center;
 }
@@ -120,7 +129,7 @@ h1{
 .arrow{
      position: relative;
     width:15vw;
-    top:85vh;
+    top:80vh;
     left:40vw;
     animation: down 3s ease infinite;
 }
