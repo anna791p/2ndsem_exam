@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,52 @@
 </head>
 
 <body>
+
+    <header class="appbar">
+        <img src="img/Logo_black.svg" class="menulogo">
+        <ul class="deskmenu">
+
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="artwork.html">ARTWORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <svg class="menuIcon" viewBox="0 0 100 100">
+  <rect class="myrect" x="10" y="10" width="80" height="10"/>
+  <rect class="myrect" x="10" y="30" width="80" height="10"/>
+  <rect class="myrect" x="10" y="50" width="80" height="10"/>
+</svg>
+    </header>
+    <aside class="menu hidden">
+        <ul>
+            <li><a href="artwork.html">ARTWORK</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </aside>
+
+
+    <form action="http://annabellegoldsworthy.com/kea/exam_2/sendMail.php" method="POST"> <!-- insert php site -->
+    Name:
+    <input type="text" name="name"><br>
+    Email:
+    <input type="email" name="email"><br>
+    Subject:
+    <input type="text" name="subject"><br>
+    Message:
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    <input type="submit">
+  </form>
+
     <script src=""></script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
