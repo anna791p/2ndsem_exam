@@ -1,6 +1,150 @@
-    @font-face {
-      font-family: 'alegreya';
-      src: url(fonts/alegreyasans/AlegreyaSansSC-Bold.otf);
+
+ @font-face {font-family: 'jaapokki';
+        src: url(fonts/jaapokki/regular/jaapokki-regular.otf)}
+@font-face{font-family: 'jaapokki enhance';
+    src: url(fonts/jaapokki/enchance/Jaapokkienchance-Regular.otf);
+}
+.vid_front{
+    display: none;
+}
+
+/*Menu starts*/
+.deskmenu{
+    display: none;
+
+}
+.logo_black{
+    display: none;
+    width: 30%;
+    transition: all .3s;
+}
+ul>li{
+letter-spacing: 1.5px;
+    list-style-type: none;
+    text-transform: uppercase;
+    line-height:30px;
+     font-weight: 850;
+    font-size: 1.3em;
+}
+
+.appbar {
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  left:0;
+    z-index: 1;
+    transition: all .6s;
+}
+.appbar, .menu, .deskmenu {
+  padding: 1em;
+  position: fixed;
+}
+.menu {
+width: 100vw;
+height: 130px;
+top:80px;
+right:0;
+    text-align: right;
+transition: all 0.6s;
+  color: black;
+}
+.menu.hidden {
+  transform: translateX(100vw);
+}
+
+.menuIcon {
+    float: right;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.menuIcon rect {
+  fill: black;
+  transition: all 0.6s;
+}
+.menuIcon rect:nth-child(1){
+  transform-origin: left top;
+}
+.menuIcon rect:nth-child(3){
+  transform-origin: left bottom;
+}
+.menuIcon rect.fadeOut {
+  opacity: 0;
+}
+.menuIcon rect.rotateUp {
+  transform: rotate(-45deg) translate(18px, 41px);
+}
+.menuIcon rect.rotateDown {
+  transform: rotate(45deg) translate(17px, -14px);
+}
+/*Menu ends*/
+video{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100vw;
+    opacity: .5;
+}
+.logo{
+    width:50vw;
+    position: absolute;
+    left:20vw;
+    top:25vh;
+}
+.front{
+    display: inline;
+    z-index: 10;
+    position: relative;
+    top:50vh;
+    left:45vw;
+    color:#1C3652;
+    font-size: 4em;
+}
+
+li,h2, h1{
+      font-family: 'jaapokki';
+}
+/*h2{
+    font-family: 'jaapokki enhance';
+
+}*/
+h1{
+    text-align: center;
+}
+#recent{
+    position: absolute;
+    top:120vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin:10px;
+}
+#recent h1{
+    grid-column: 1/-1;
+}
+.menuIcon, .arrow{
+    cursor: pointer;
+}
+.arrow{
+     position: relative;
+    width:15vw;
+    top:80vh;
+    left:40vw;
+    animation: down 3s ease infinite;
+}
+@keyframes down{
+    50%{transform: translateY(3vh)}
+    100%{transform:translateY(0)}
+
+}
+a{
+    text-decoration: none;
+    color: #1C3652;
+    transition: all 2s;
+}
+
+@media (min-width: 800px)  {
+    .vid_front{
+        display: initial;
     }
 
     .vid_front {
@@ -128,7 +272,7 @@
     li,
     h1,
     h2 {
-      font-family: 'alegreya';
+      font-family: 'jaapokki';
     }
 
     h1 {
@@ -173,6 +317,10 @@
       text-decoration: none;
       color: #1C3652;
       transition: all 2s;
+    }
+
+    form {
+      padding-top: 150px;
     }
 
     @media (min-width: 800px) {
@@ -251,11 +399,19 @@
         transform: rotate(45deg) translate(17px, -14px);
       }
       /*Menu ends*/
+<<<<<<< HEAD
       /* #heroimg {
         background-image: url(img/bla1.PNG);
         height: 100vh;
         background-size: cover;
       } */
+=======
+      /*#heroimg {
+        background-image: url(img/bla1.PNG);
+        height: 100vh;
+        background-size: cover;*/
+      }
+>>>>>>> 8072019d0e3ee5f2e2e041da676dcd970ecd646f
       .menulogo {
         width: 15vw;
       }
@@ -268,7 +424,7 @@
       }
       li,
       h1 {
-        font-family: 'alegreya';
+        font-family: 'jaapokki';
       }
       h1 {
         text-align: center;
@@ -347,4 +503,7 @@
         }
       }
       @media (min-width: 1300px) {}
+<<<<<<< HEAD
     }
+=======
+>>>>>>> 8072019d0e3ee5f2e2e041da676dcd970ecd646f
