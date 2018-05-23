@@ -122,6 +122,7 @@
       left: 45vw;
       color: #000;
       font-size: 5em;
+      display: inline;
     }
 
     li,
@@ -250,11 +251,11 @@
         transform: rotate(45deg) translate(17px, -14px);
       }
       /*Menu ends*/
-      #heroimg {
+      /* #heroimg {
         background-image: url(img/bla1.PNG);
         height: 100vh;
         background-size: cover;
-      }
+      } */
       .menulogo {
         width: 15vw;
       }
