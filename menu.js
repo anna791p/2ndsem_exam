@@ -1,4 +1,5 @@
 
+
   let menuOpen = false;
   let menuIcon = document.querySelector(".menuIcon")
   let menu = document.querySelector(".menu");
@@ -12,10 +13,9 @@ let appbar = document.querySelector(".appbar")
     bars[1].classList.toggle("fadeOut");
     bars[2].classList.toggle("rotateUp");
     menu.classList.toggle("hidden");
-      appbar.classList.toggle("shadow");
+    appbar.classList.toggle("shadow");
 
   }
-
 
 
 

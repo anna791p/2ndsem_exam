@@ -1,22 +1,22 @@
-
- @font-face {font-family: 'jaapokki';
-    src: url(fonts/jaapokki/regular/jaapokki-regular.otf)}
-@font-face{font-family: 'jaapokki enhance';
-    src: url(fonts/jaapokki/enchance/Jaapokkienchance-Regular.otf);
-}
-body{
-    margin: 0;
-    max-width: 100vw;
+@font-face {
+  font-family: 'jaapokki';
+  src: url(fonts/jaapokki/regular/jaapokki-regular.otf)
 }
 
-.vid_front{
-    display: none;
+li,
+h1,
+h2 {
+  font-family: 'jaapokki';
+}
+
+h1 {
+  text-align: center;
 }
 
 /*Menu starts*/
-.deskmenu{
-    display: none;
 
+.deskmenu {
+  display: none;
 }
 
 ul>li{
@@ -28,98 +28,100 @@ ul>li{
 }
 
 .appbar {
+  background-color:rgba(252, 209, 247, .6);
   width: 100vw;
   height:40px;
   top: 0;
-  left:0;
-    z-index: 1;
-    transition: all .6s;
+  left: 0;
+  z-index: 1;
+  transition: all .6s;
 }
-.appbar, .menu, .deskmenu {
-background-color: rgba(252, 209, 247, .6);
+
+.appbar,
+.menu,
+.deskmenu {
   padding: 5px;
   position: fixed;
 margin:0;
 z-index: 10;
 }
 .shadow{
-    box-shadow: 0px 3px 6px rgba(68,68,68, 0.2);
+box-shadow: 0px 3px 6px rgba(68,68,68, 0.2);
 }
-.menu {
 
+.menu {
 width: 100vw;
 height: 140px;
 top:50px;
 left:0;
-    margin:0;
-    text-align: right;
+margin:0;
+text-align: right;
 transition: all 0.6s;
-  color: black;
 }
+
 .menu.hidden {
   transform: translateX(100vw);
 }
 
 .menuIcon {
-    float: right;
+  float: right;
   height: 30px;
   margin-top: 10px;
   margin-right: 50px;
 }
+
 .menuIcon rect {
   fill: black;
   transition: all 0.6s;
 }
-.menuIcon rect:nth-child(1){
+
+.menuIcon rect:nth-child(1) {
   transform-origin: left top;
 }
-.menuIcon rect:nth-child(3){
+
+.menuIcon rect:nth-child(3) {
   transform-origin: left bottom;
 }
+
 .menuIcon rect.fadeOut {
   opacity: 0;
 }
+
 .menuIcon rect.rotateUp {
   transform: rotate(-45deg) translate(18px, 41px);
 }
+
 .menuIcon rect.rotateDown {
   transform: rotate(45deg) translate(17px, -14px);
 }
-/*Menu ends*/
-video{
-    position: absolute;
+.menulogo {
+    width: 15vw;
     top: 0;
-    left:0;
-    width: 100vw;
-    opacity: .5;
-}
-.logo{
-    width:0vw;
     position: absolute;
-    left:20vw;
-    top:25vh;
-}
-.front{
-    display: inline;
-    z-index: 10;
-    position: relative;
-    top:50vh;
-    left:45vw;
-    color:#1C3652;
-    font-size: 3.5em;
-    font-weight: 100;
+  }
+/*Menu ends*/
+
+
+.logo {
+  width: 50vw;
+  position: absolute;
+  left: 20vw;
+  top: 25vh;
+
 }
 
-li,h2, h1{
-      font-family: 'jaapokki';
+.front {
+  display: inline;
+  z-index: 10;
+  position: relative;
+  top: 50vh;
+  left: 45vw;
+  color: #1C3652;
+  font-size: 3.5em;
+  font-weight: 100;
 }
-/*h2{
-    font-family: 'jaapokki enhance';
 
-}*/
-h1{
-    text-align: center;
-}
+
 #recent{
     position: absolute;
     top:120vh;
@@ -134,7 +136,7 @@ h1{
     cursor: pointer;
 }
 .arrow{
-     position: relative;
+     position: absolute;
     width:15vw;
     top:80vh;
     animation: down 3s ease infinite;
@@ -142,7 +144,6 @@ h1{
 @keyframes down{
     50%{transform: translateY(3vh)}
     100%{transform:translateY(0)}
-
 }
 a{
     font-weight: 100;
@@ -163,339 +164,71 @@ a{
 }
 
 @media (min-width: 800px)  {
-    .vid_front{
-        display: initial;
-    }
-
-    .vid_front {
-      display: none;
-    }
-
-    h1 {
+        h1 {
       font-size: 3em;
       padding-top: 3em;
     }
 
     /*Menu starts*/
-
-    .deskmenu {
-      display: none;
-    }
-
-
-    ul>li {
-      list-style-type: none;
-      text-transform: uppercase;
-      line-height: 30px;
-      font-weight: 850;
-      font-size: 1.3em;
-    }
-
-
-
     .appbar,
     .menu,
     .deskmenu {
       padding: 3px;
-      position: fixed;
     }
-
-    .menu {
-      width: 100vw;
-      height: 130px;
-      top: 100px;
-      right: 0;
-      transition: all 0.6s;
-      color: black;
-    }
-
-    .menu.hidden {
-      transform: translateX(100vw);
-    }
-
-    .menuIcon {
-      float: right;
-      height: 30px;
-      margin-top: 10px;
-      margin-right: 50px;
-    }
-
-    .menuIcon rect {
-      fill: black;
-      transition: all 0.6s;
-    }
-
-    .menuIcon rect:nth-child(1) {
-      transform-origin: left top;
-    }
-
-    .menuIcon rect:nth-child(3) {
-      transform-origin: left bottom;
-    }
-
-    .menuIcon rect.fadeOut {
-      opacity: 0;
-    }
-
-    .menuIcon rect.rotateUp {
-      transform: rotate(-45deg) translate(18px, 41px);
-    }
-
-    .menuIcon rect.rotateDown {
-      transform: rotate(45deg) translate(17px, -14px);
-    }
-
-    /*Menu ends*/
-
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      opacity: .5;
-    }
-
-    .logo {
-      width: 80vw;
-      position: absolute;
-      left: 20vw;
-      top: 25vh;
-    }
-
-    .menulogo {
-      width: 30vw;
-    }
-
-    .front {
-      z-index: 10;
-      position: relative;
-      top: 45vh;
-      left: 45vw;
-      font-size: 5em;
-    }
-
-    li,
-    h1,
-    h2 {
-      font-family: 'jaapokki';
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    #recent {
-      position: absolute;
-      top: 120vh;
-      display: grid;
-      grid-template-columns: 1fr;
-      margin: 10px;
-    }
-
-    #recent h1 {
-      grid-column: 1/-1;
-    }
-
-    .menuIcon,
-    .arrow {
-      cursor: pointer;
-    }
-
-    .arrow {
-      position: relative;
-      width: 15vw;
-      top: 85vh;
-      left: 40vw;
-      animation: down 3s ease infinite;
-    }
-
-    @keyframes down {
-      50% {
-        transform: translateY(3vh)
-      }
-      100% {
-        transform: translateY(0)
-      }
-    }
-
-    a {
-      text-decoration: none;
-      color: #1C3652;
-      transition: all 2s;
-    }
-
-    form {
-      padding-top: 150px;
-    }
-
-    @media (min-width: 800px) {
-      .vid_front {
-        display: initial;
-      }
-      /***menu starts***/
-      .deskmenu {
-        display: initial;
+.deskmenu {
+    display: initial;
         top: 0;
         right: 0vw;
       }
-      .deskmenu {
-        display: none;
-      }
+        .deskmenu li {
+          display: inline;
+          padding: 2em;
+          font-size: 1.3em;
+        }
+   .menulogo {
+      width: 30vw;
+    }
 
-      ul>li {
-        list-style-type: none;
-        text-transform: uppercase;
-        line-height: 30px;
-        font-weight: 700;
-        font-size: 1.3em;
-      }
-      .appbar {
-        width: 100vw;
-        height: 30px;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        transition: all .6s;
-      }
-      .appbar,
-      .menu,
-      .deskmenu {
-          margin: 0;
-        padding: 1em;
-        position: fixed;
-      }
+  .menuIcon,
+  .menu {
+    display: none;
+  }
+    /*Menu ends*/
 
 
-        .menu.hidden {
-        transform: translateX(100vw);
-      }
-      .menuIcon {
-        float: right;
-        height: 30px;
-        margin-top: 10px;
-        margin-right: 50px;
-      }
-      .menuIcon rect {
-        fill: black;
-        transition: all 0.6s;
-      }
-      .menuIcon rect:nth-child(1) {
-        transform-origin: left top;
-      }
-      .menuIcon rect:nth-child(3) {
-        transform-origin: left bottom;
-      }
-      .menuIcon rect.fadeOut {
-        opacity: 0;
-      }
-      .menuIcon rect.rotateUp {
-        transform: rotate(-45deg) translate(18px, 41px);
-      }
-      .menuIcon rect.rotateDown {
-        transform: rotate(45deg) translate(17px, -14px);
-      }
-      /*Menu ends*/
-      /*#heroimg {
-        background-image: url(img/bla1.PNG);
-        height: 100vh;
-        background-size: cover;*/
-      }
-      .menulogo {
-        width: 15vw;
-          top:0;
-          position: absolute;
-      }
+#recent {
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 10px;
+}
+
+  form {
+    padding-top: 150px;
+  }
+
+  .column_grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    padding: 3em;
+  }
+  .gridimg {
+    width: 100%;
+    height: 50em
+  }
       .arrow {
-        position: absolute;
         top: 80vh;
         width: 8vw;
         height: 20vh;
         left: 43vw;
       }
-      li,
-      h1 {
-        font-family: 'jaapokki';
-      }
-      h1 {
-        text-align: center;
-      }
-      #recent {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 10px;
-      }
-      #recent h1 {
-        grid-column: 1/-1;
-      }
-      .menuIcon,
-      .arrow {
-        cursor: pointer;
-      }
-      .arrow {
-        position: relative;
-        width: 15vw;
-        top: 85vh;
-        left: 40vw;
-        animation: down 3s ease infinite;
-      }
-      @keyframes down {
-        50% {
-          transform: translateY(3vh)
-        }
-        100% {
-          transform: translateY(0)
-        }
-      }
-      a {
-        text-decoration: none;
-        color: #1C3652;
-        transition: all 2s;
-      }
-      @media (min-width: 800px) {
+
           #anim{
     display: initial;
 }
           #anim-mobile{
               display: none;
           }
-        /***menu starts***/
-        .deskmenu {
-          display: initial;
-          top: 0;
-          right: 0vw;
-        }
-        .deskmenu li {
-          display: inline;
-          padding: 2em;
-          font-size: 1.3em;
-        }
-        .menuIcon,
-        .menu {
-          display: none;
-        }
-        .logo_black {
-          width: 15%;
-        }
-        .arrow {
-          top: 80vh;
-          width: 8vw;
-          height: 20vh;
-          left: 43vw;
-        }
-        /***menu stops***/
-        #recent {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-        }
-        .column_grid {
-          display: grid;
-          grid-template-columns: 2fr 2fr;
-          grid-gap: 1em;
-          padding: 3em;
-        }
-        .gridimg {
-          width: 100%;
-          height: 50em
-        }
+
       }
       @media (min-width: 1300px) {}
+
