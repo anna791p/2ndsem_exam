@@ -13,6 +13,16 @@
   src: url(fonts/jaapokki/enchance/Jaapokkienchance-Regular.otf);
 }
 
+li,
+h1,
+h2 {
+  font-family: 'jaapokki';
+}
+
+h1 {
+  text-align: center;
+}
+
 .vid_front {
   display: none;
 }
@@ -149,7 +159,7 @@ h1 {
   position: absolute;
   top: 120vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 10px;
 }
 
@@ -191,6 +201,14 @@ a {
   opacity: .5;
 }
 
+.deskmenu {
+  display: none;
+}
+
+.deskmenu {
+  display: none;
+}
+
 @media (min-width: 800px) {
   .vid_front {
     display: initial;
@@ -198,18 +216,26 @@ a {
   .vid_front {
     display: none;
   }
+  .deskmenu {
+    display: initial;
+    top: 0;
+    right: 0vw;
+  }
   h1 {
     font-size: 3em;
     padding-top: 3em;
   }
   /*Menu starts*/
-  .deskmenu {
-    display: none;
-  }
   .logo_black {
     display: none;
     width: 30%;
     transition: all .3s;
+  }
+  .logo {
+    width: 50vw;
+    position: absolute;
+    left: 20vw;
+    top: 25vh;
   }
   ul>li {
     list-style-type: none;
@@ -285,6 +311,8 @@ a {
   }
   .menulogo {
     width: 15vw;
+    top: 0;
+    position: absolute;
   }
   .front {
     z-index: 10;
@@ -295,17 +323,7 @@ a {
     font-size: 5em;
     display: inline;
   }
-  li,
-  h1,
-  h2 {
-    font-family: 'jaapokki';
-  }
-  h1 {
-    text-align: center;
-  }
   #recent {
-    position: absolute;
-    top: 120vh;
     display: grid;
     grid-template-columns: 1fr;
     margin: 10px;
@@ -340,379 +358,27 @@ a {
   form {
     padding-top: 150px;
   }
-  @media (min-width: 800px) {
-    .vid_front {
-      display: initial;
-    }
-    /***menu starts***/
-    .deskmenu {
-      display: initial;
-      top: 0;
-      right: 0vw;
-    }
-    .deskmenu {
-      display: none;
-    }
-    .logo_black {
-      width: 30%;
-      transition: all .3s;
-    }
-    ul>li {
-      list-style-type: none;
-      text-transform: uppercase;
-      line-height: 30px;
-      font-weight: 700;
-      font-size: 1.3em;
-    }
-    .appbar {
-      width: 100vw;
-      height: 80px;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transition: all .6s;
-    }
-    .appbar,
-    .menu,
-    .deskmenu {
-      padding: 1em;
-      position: fixed;
-    }
-    .menu {
-      width: 100vw;
-      height: 130px;
-      top: 80px;
-      right: 0;
-      text-align: right;
-      transition: all 0.6s;
-      color: black;
-    }
-    .menu.hidden {
-      transform: translateX(100vw);
-    }
-    .menuIcon {
-      float: right;
-      height: 30px;
-      margin-top: 10px;
-      margin-right: 50px;
-    }
-    .menuIcon rect {
-      fill: black;
-      transition: all 0.6s;
-    }
-    .menuIcon rect:nth-child(1) {
-      transform-origin: left top;
-    }
-    .menuIcon rect:nth-child(3) {
-      transform-origin: left bottom;
-    }
-    .menuIcon rect.fadeOut {
-      opacity: 0;
-    }
-    .menuIcon rect.rotateUp {
-      transform: rotate(-45deg) translate(18px, 41px);
-    }
-    .menuIcon rect.rotateDown {
-      transform: rotate(45deg) translate(17px, -14px);
-    }
-    /*Menu ends*/
-    /* #heroimg {
-        background-image: url(img/bla1.PNG);
-        height: 100vh;
-        background-size: cover;
-      } */
-    /*#heroimg {
-        background-image: url(img/bla1.PNG);
-        height: 100vh;
-        background-size: cover;*/
-  }
-  .menulogo {
-    width: 15vw;
-  }
-  .arrow {
-    position: absolute;
-    top: 80vh;
-    width: 8vw;
-    height: 20vh;
-    left: 43vw;
-  }
-  li,
-  h1 {
-    font-family: 'jaapokki';
-  }
-  h1 {
-    text-align: center;
-  }
-  #recent {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px;
-  }
-  #recent h1 {
-    grid-column: 1/-1;
+  .deskmenu li {
+    display: inline;
+    padding: 2em;
+    font-size: 1.3em;
   }
   .menuIcon,
-  .arrow {
-    cursor: pointer;
+  .menu {
+    display: none;
   }
-  .arrow {
-    position: relative;
-    width: 15vw;
-    top: 85vh;
-    left: 40vw;
-    animation: down 3s ease infinite;
+  .logo_black {
+    width: 15%;
   }
-  @keyframes down {
-    50% {
-      transform: translateY(3vh)
-    }
-    100% {
-      transform: translateY(0)
-    }
-  }
-  /* video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        opacity: .5;
-      } */
-  .logo {
-    width: 50vw;
-    position: absolute;
-    left: 20vw;
-    top: 25vh;
-  }
-  .menulogo {
-    width: 30vw;
-  }
-  .front {
-    z-index: 10;
-    position: relative;
-    top: 45vh;
-    left: 45vw;
-    font-size: 5em;
-  }
-  li,
-  h1,
-  h2 {
-    font-family: 'jaapokki';
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    transition: all 2s;
-  }
-  @media (min-width: 800px) {
-    /***menu starts***/
-    .deskmenu {
-      display: initial;
-      top: 0;
-      right: 0vw;
-    }
-    .deskmenu li {
-      display: inline;
-      padding: 2em;
-      font-size: 1.3em;
-    }
-    .menuIcon,
-    .menu {
-      display: none;
-    }
-    .logo_black {
-      width: 15%;
-    }
-    .arrow {
-      top: 80vh;
-      width: 8vw;
-      height: 20vh;
-      left: 43vw;
-    }
-    /***menu stops***/
-    #recent {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .column_grid {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      grid-gap: 1em;
-      padding: 3em;
-    }
-    .gridimg {
-      width: 100%;
-      height: 50em
-    }
-  }
-  @media (min-width: 800px) {
-    .vid_front {
-      display: initial;
-    }
-    /***menu starts***/
-    .deskmenu {
-      display: initial;
-      top: 0;
-      right: 0vw;
-    }
-    .deskmenu {
-      display: none;
-    }
-    ul>li {
-      list-style-type: none;
-      text-transform: uppercase;
-      line-height: 30px;
-      font-weight: 700;
-      font-size: 1.3em;
-    }
-    .appbar {
-      width: 100vw;
-      height: 30px;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transition: all .6s;
-    }
-    .appbar,
-    .menu,
-    .deskmenu {
-      margin: 0;
-      padding: 1em;
-      position: fixed;
-    }
-    .menu {
-      width: 100vw;
-      height: 130px;
-      top: 80px;
-      right: 0;
-      text-align: right;
-      transition: all 0.6s;
-      color: black;
-    }
-    .menu.hidden {
-      transform: translateX(100vw);
-    }
-    .menuIcon {
-      float: right;
-      height: 30px;
-      margin-top: 10px;
-      margin-right: 50px;
-    }
-    .menuIcon rect {
-      fill: black;
-      transition: all 0.6s;
-    }
-    .menuIcon rect:nth-child(1) {
-      transform-origin: left top;
-    }
-    .menuIcon rect:nth-child(3) {
-      transform-origin: left bottom;
-    }
-    .menuIcon rect.fadeOut {
-      opacity: 0;
-    }
-    .menuIcon rect.rotateUp {
-      transform: rotate(-45deg) translate(18px, 41px);
-    }
-    .menuIcon rect.rotateDown {
-      transform: rotate(45deg) translate(17px, -14px);
-    }
-    /*Menu ends*/
-    /*#heroimg {
-        background-image: url(img/bla1.PNG);
-        height: 100vh;
-        background-size: cover;*/
-  }
-  .menulogo {
-    width: 15vw;
-    top: 0;
-    position: absolute;
-  }
-  .arrow {
-    position: absolute;
-    top: 80vh;
-    width: 8vw;
-    height: 20vh;
-    left: 43vw;
-  }
-  li,
-  h1 {
-    font-family: 'jaapokki';
-  }
-  h1 {
-    text-align: center;
-  }
-  #recent {
+  .column_grid {
     display: grid;
-    grid-template-columns: 1fr;
-    margin: 10px;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 1em;
+    padding: 3em;
   }
-  #recent h1 {
-    grid-column: 1/-1;
-  }
-  .menuIcon,
-  .arrow {
-    cursor: pointer;
-  }
-  .arrow {
-    position: relative;
-    width: 15vw;
-    top: 85vh;
-    left: 40vw;
-    animation: down 3s ease infinite;
-  }
-  @keyframes down {
-    50% {
-      transform: translateY(3vh)
-    }
-    100% {
-      transform: translateY(0)
-    }
-  }
-  a {
-    text-decoration: none;
-    color: #1C3652;
-    transition: all 2s;
-  }
-  @media (min-width: 800px) {
-    /***menu starts***/
-    .deskmenu {
-      display: initial;
-      top: 0;
-      right: 0vw;
-    }
-    .deskmenu li {
-      display: inline;
-      padding: 2em;
-      font-size: 1.3em;
-    }
-    .menuIcon,
-    .menu {
-      display: none;
-    }
-    .logo_black {
-      width: 15%;
-    }
-    .arrow {
-      top: 80vh;
-      width: 8vw;
-      height: 20vh;
-      left: 43vw;
-    }
-    /***menu stops***/
-    #recent {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    .column_grid {
-      display: grid;
-      grid-template-columns: 2fr 2fr;
-      grid-gap: 1em;
-      padding: 3em;
-    }
-    .gridimg {
-      width: 100%;
-      height: 50em
-    }
+  .gridimg {
+    width: 100%;
+    height: 50em
   }
 }
 
