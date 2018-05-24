@@ -3,7 +3,7 @@
   let menuIcon = document.querySelector(".menuIcon")
   let menu = document.querySelector(".menu");
  let bars = menuIcon.querySelectorAll("rect");
-    let appbar = document.querySelector(".appbar")
+let appbar = document.querySelector(".appbar")
   menuIcon.addEventListener('click', toggleMenu);
 
   function toggleMenu(){
@@ -12,6 +12,7 @@
     bars[1].classList.toggle("fadeOut");
     bars[2].classList.toggle("rotateUp");
     menu.classList.toggle("hidden");
+      appbar.classList.toggle("shadow");
 
   }
 
