@@ -1,6 +1,6 @@
 
  @font-face {font-family: 'jaapokki';
-        src: url(fonts/jaapokki/regular/jaapokki-regular.otf)}
+    src: url(fonts/jaapokki/regular/jaapokki-regular.otf)}
 @font-face{font-family: 'jaapokki enhance';
     src: url(fonts/jaapokki/enchance/Jaapokkienchance-Regular.otf);
 }
@@ -28,8 +28,10 @@ letter-spacing: 1.5px;
 }
 
 .appbar {
+    background-color: #FCD1F7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100vw;
-  height: 80px;
+  height: 5vh;
   top: 0;
   left:0;
     z-index: 1;
@@ -98,7 +100,8 @@ video{
     top:50vh;
     left:45vw;
     color:#1C3652;
-    font-size: 4em;
+    font-size: 3.5em;
+    font-weight: 100;
 }
 
 li,h2, h1{
@@ -141,6 +144,10 @@ a{
     color: #1C3652;
     transition: all 2s;
 }
+#anim{
+    width: 100vw;
+    opacity: .5;
+}
 
 @media (min-width: 800px)  {
     .vid_front{
@@ -176,14 +183,7 @@ a{
       font-size: 1.3em;
     }
 
-    .appbar {
-      width: 100vw;
-      height: 80px;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transition: all .6s;
-    }
+
 
     .appbar,
     .menu,
@@ -264,7 +264,6 @@ a{
       position: relative;
       top: 45vh;
       left: 45vw;
-      color: #000;
       font-size: 5em;
     }
 
@@ -335,10 +334,7 @@ a{
       .deskmenu {
         display: none;
       }
-      .logo_black {
-        width: 30%;
-        transition: all .3s;
-      }
+
       ul>li {
         list-style-type: none;
         text-transform: uppercase;
@@ -348,7 +344,7 @@ a{
       }
       .appbar {
         width: 100vw;
-        height: 80px;
+        height: 30px;
         top: 0;
         left: 0;
         z-index: 1;
@@ -357,6 +353,7 @@ a{
       .appbar,
       .menu,
       .deskmenu {
+          margin: 0;
         padding: 1em;
         position: fixed;
       }
@@ -405,6 +402,8 @@ a{
       }
       .menulogo {
         width: 15vw;
+          top:0;
+          position: absolute;
       }
       .arrow {
         position: absolute;
@@ -449,7 +448,7 @@ a{
       }
       a {
         text-decoration: none;
-        color: black;
+        color: #1C3652;
         transition: all 2s;
       }
       @media (min-width: 800px) {
