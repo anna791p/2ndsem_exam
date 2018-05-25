@@ -1,4 +1,4 @@
-
+window.addEventListener('load',()=>{
 
   let menuOpen = false;
   let menuIcon = document.querySelector(".menuIcon")
@@ -16,6 +16,17 @@ let appbar = document.querySelector(".appbar")
     appbar.classList.toggle("shadow");
 
   }
+});
+function showLoader(){
+    let loader = document.querySelector(".container");
+    loader.classList.remove("hiddenloader");
+    document.querySelector("footer").classList.add("hiddenloader");
+}
+function hideLoader(){
+    let loader = document.querySelector(".container");
+    loader.classList.add("hiddenloader");
+    document.querySelector("footer").classList.remove("hiddenloader");
+}
 
 
 

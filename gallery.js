@@ -1,4 +1,4 @@
-
+showLoader()
 function fetchGallery(){
     fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed")
         .then(e => e.json())
@@ -6,6 +6,7 @@ function fetchGallery(){
 }
 
 function showGallery(data){
+    hideLoader()
     console.log(data)
     data.forEach(showSinglePiece)
 }

@@ -2,7 +2,45 @@
   font-family: 'jaapokki';
   src: url(fonts/jaapokki/regular/jaapokki-regular.otf)
 }
+/*Loader*/
+.page {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s;
+}
+.hiddenloader {
+    opacity:0;
+    visibility: hidden;
+}
+.container {
+    z-index: 30;
+    position: absolute;
+top:0;
+                left:0;
+            background-color: #FCD1F7;
+            height: 100vh;
+            width: 100vw;
+        }
+        svg{
+            position: relative;
+            top:35vh;
+            left:45vw;
+            width: 30vh;
+        }
+.draw {
+  stroke: black;
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite alternate;
+}
 
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/****/
 li,
 h1,
 h2 {
@@ -110,7 +148,9 @@ ul>li {
   left: 20vw;
   top: 25vh;
 }
-
+#frontpage{
+    height: 100vh;
+}
 .front {
   /* display: inline; */
   /* z-index: 10; */
@@ -169,7 +209,7 @@ a {
   top: 0;
   left: 0; */
   width: 100vw;
-  opacity: .9;
+  opacity: .5;
 }
 
 #anim {
