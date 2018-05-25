@@ -216,7 +216,7 @@ a {
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   h1 {
     font-size: 3em;
     padding-top: 3em;
@@ -285,4 +285,4 @@ a {
   }
 }
 
-@media (min-width: 1300px) {}
+@media (min-width: 1024px) {}
