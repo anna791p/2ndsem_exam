@@ -238,6 +238,11 @@ a {
   #anim-mobile {
     display: none;
   }
+  #gallerylist {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    padding: 10em;
+  }
 }
 
 @media (min-width: 1300px) {}
