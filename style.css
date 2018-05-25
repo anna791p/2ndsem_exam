@@ -2,6 +2,10 @@
   font-family: 'jaapokki';
   src: url(fonts/jaapokki/regular/jaapokki-regular.otf)
 }
+body{
+    margin:0;
+    padding:0;
+}
 /*Loader*/
 .page {
     opacity: 1;
