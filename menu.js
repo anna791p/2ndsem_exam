@@ -20,12 +20,11 @@ let appbar = document.querySelector(".appbar")
 function showLoader(){
     let loader = document.querySelector(".container");
     loader.classList.remove("hiddenloader");
-    document.querySelector("footer").classList.add("hiddenloader");
 }
 function hideLoader(){
     let loader = document.querySelector(".container");
     loader.classList.add("hiddenloader");
-    document.querySelector("footer").classList.remove("hiddenloader");
+
 }
 
 
