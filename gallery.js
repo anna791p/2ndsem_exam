@@ -1,15 +1,15 @@
-// function showLoader() {
-//   let loader = document.querySelector(".container");
-//   loader.classList.remove("hiddenloader");
-// }
+function showLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.remove("hiddenloader");
+}
 
-// function hideLoader() {
-//   let loader = document.querySelector(".container");
-//   loader.classList.add("hiddenloader");
+function hideLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.add("hiddenloader");
 
-// }
+}
 
-// showLoader()
+showLoader()
 
 let handleProjectItemHover = function(projectItemElement, option) {
   projectItemElement.children[1].style.display = option;
@@ -22,7 +22,7 @@ function fetchGallery() {
 }
 
 function showGallery(data) {
-  // hideLoader();
+  hideLoader();
   console.log(data);
   data.forEach(showSinglePiece);
 }
@@ -54,6 +54,5 @@ function showSinglePiece(aPiece) {
 
   gallerylist.appendChild(clone);
 }
-
 
 fetchGallery();

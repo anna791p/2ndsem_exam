@@ -305,6 +305,72 @@ img.alignnone{
 }
 
 
+form {
+    padding-top: 100px;
+}
+
+label {
+    font-family: 'print clearly', sans-serif;
+}
+
+/* w3 schools */
+input[type=text], select {
+    width: 100%;
+    height: 2em;
+    border: none;
+}
+
+input[type=email] {
+    width: 100%;
+    height: 2em;
+    border: none;
+}
+
+input[type=submit] {
+    width: 100%;
+    height: 3em;
+    border: none;
+    background-color: pink;
+}
+
+div.form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+    border: none;
+}
+
+.thanks {
+    background-color: rgba(252, 209, 247, 1)
+}
+
+.thanks div p {
+    font-size: 2em;
+    position: relative;
+    left: 10px;
+}
+
+.thanks img {
+    width: 60vw;
+    position: relative;
+    left: 15vw;
+}
+
+.thanks a {
+    border-bottom: 2px solid black;
+}
+
+.regards {
+    margin-bottom: 0;
+}
+
+
 @media (min-width: 768px) {
   .front {
     top: 50vh;
@@ -390,6 +456,7 @@ img.alignnone{
     width: 100%;
 }
 
+<<<<<<< HEAD
 
     .title-more{
         grid-column: 1/-1;
@@ -400,3 +467,6 @@ img.alignnone{
       column-count: 3;
 
     }
+=======
+@media (min-width: 1024px) {}
+>>>>>>> origin/master
