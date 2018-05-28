@@ -62,6 +62,9 @@ function showSinglePiece(aPiece) {
   clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
   let recentpiece = document.querySelector("#recentpiece");
+
+    clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
+
   recentpiece.appendChild(clone);
 
 }
