@@ -1,14 +1,18 @@
-showLoader()
+// function showLoader() {
+//   let loader = document.querySelector(".container");
+//   loader.classList.remove("hiddenloader");
+// }
 
-function showLoader() {
-  let loader = document.querySelector(".container");
-  loader.classList.remove("hiddenloader");
-}
+// function hideLoader() {
+//   let loader = document.querySelector(".container");
+//   loader.classList.add("hiddenloader");
 
-function hideLoader() {
-  let loader = document.querySelector(".container");
-  loader.classList.add("hiddenloader");
+// }
 
+// showLoader()
+
+let handleProjectItemHover = function(projectItemElement, option) {
+  projectItemElement.children[1].style.display = option;
 }
 
 function fetchGallery() {
@@ -18,13 +22,13 @@ function fetchGallery() {
 }
 
 function showGallery(data) {
-  hideLoader()
-  console.log(data)
-  data.forEach(showSinglePiece)
+  // hideLoader();
+  console.log(data);
+  data.forEach(showSinglePiece);
 }
 
-
 function showSinglePiece(aPiece) {
+  console.log("aPiece: ", aPiece);
 
   let template = document.querySelector("#gallerytemp").content;
   let clone = template.cloneNode(true);
@@ -46,7 +50,6 @@ function showSinglePiece(aPiece) {
 
   let gallerylist = document.querySelector("#gallerylist");
   gallerylist.appendChild(clone);
-
 }
 
 fetchGallery();
