@@ -2,41 +2,51 @@
   font-family: 'jaapokki';
   src: url(fonts/jaapokki/regular/jaapokki-regular.otf)
 }
+
 @font-face {
   font-family: 'print clearly';
   src: url(fonts/printclearly.otf)
 }
 
-body{
-    margin:0;
-    padding:0;
+body {
+  margin: 0;
+  padding: 0;
 }
+
 /*Loader*/
-.svg{
-   position: relative;
-top:35vh;
-left:45vw;
-width: 30vh;
+
+.svg {
+  position: relative;
+  top: 35vh;
+  left: 45vw;
+  width: 30vh;
 }
+
 .page {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s;
+  opacity: 1;
+  /* visibility: visible; */
+  display: block;
+  transition: opacity 1s;
 }
+
 .hiddenloader {
-    opacity:0;
-    visibility: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+  opacity: 0;
+  /* visibility: hidden; */
+  display: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
 }
+
 .container {
-    z-index: 30;
-    position: absolute;
-      top:0;
-        left:0;
-            background-color: #FCD1F7;
-            height: 100vh;
-            width: 100vw;
-    transition: all .3s;
-        }
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FCD1F7;
+  height: 100vh;
+  width: 100vw;
+  transition: all .3s;
+}
+
 .draw {
   stroke: black;
   stroke-width: 1;
@@ -50,19 +60,23 @@ width: 30vh;
     stroke-dashoffset: 0;
   }
 }
+
 /****/
+
 h1,
 h2 {
   font-family: 'jaapokki';
-    font-weight: 100;
+  font-weight: 100;
 }
 
 h1 {
   text-align: center;
 }
-p{
-    font-family: "print clearly";
+
+p {
+  font-family: "print clearly";
 }
+
 /*Menu starts*/
 
 .deskmenu {
@@ -75,9 +89,12 @@ ul>li {
   line-height: 30px;
   font-size: 1.3em;
 }
-.appbar, .menu{
+
+.appbar,
+.menu {
   background-color: rgba(252, 209, 247, .8);
 }
+
 .appbar {
   width: 100vw;
   height: 40px;
@@ -97,31 +114,33 @@ ul>li {
 }
 
 .dot {
-    animation: down 2.5s ease infinite;
-    position: absolute;
+  animation: down 2.5s ease infinite;
+  position: absolute;
   top: 85vh;
-    left:48vw;
+  left: 48vw;
   height: 50px;
   width: 50px;
   background-color: rgba(252, 209, 247, .8);
   border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.dot:hover{
-    animation: 0;
+
+.dot:hover {
+  animation: 0;
 }
-.arrow{
-    position: absolute;
-    top:20%;
-    left:30%;
-    border: solid #1c3652;
-    border-width: 0 3px 3px 0;
-    padding: 8px;
-      transform: rotate(45deg);
+
+.arrow {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: solid #1c3652;
+  border-width: 0 3px 3px 0;
+  padding: 8px;
+  transform: rotate(45deg);
 }
 
 .shadow {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .menu {
@@ -139,8 +158,8 @@ ul>li {
 }
 
 .menuIcon {
-float: right;
-top:0;
+  float: right;
+  top: 0;
   height: 30px;
   margin-top: 10px;
   margin-right: 50px;
@@ -174,7 +193,7 @@ top:0;
 .menulogo {
   width: 30vw;
   top: 0;
-margin-left:30px;
+  margin-left: 30px;
   position: absolute;
 }
 
@@ -186,40 +205,59 @@ margin-left:30px;
   left: 10vw;
   top: 25vh;
 }
+
 .front {
-position: absolute;
-    color: #1C3652;
-    text-transform: lowercase;
+  position: absolute;
+  color: #1C3652;
+  text-transform: lowercase;
   top: 40vh;
   left: 40vw;
   font-size: 3em;
 }
 
-#frontpage{
-    height: 100vh;
+.recentitem {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 10px 16px rgba(68, 68, 68, 0.2);
 }
 
-
-/* #recent {
+.hover_content {
+  display: none;
+  background-color: black;
+  color: white;
+  opacity: .7;
+  top: 0;
   position: absolute;
-  top: 120vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 10px;
-} */
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
-/* #recent h1 {
-  grid-column: 1/-1;
-} */
+.text {
+  position: absolute;
+  height: 100%;
+  display: block;
+  width: 184px;
+  height: 184px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  opacity: 0;
+  margin-left: .7em;
+}
 
 .menuIcon,
 .dot {
   cursor: pointer;
 }
 
-
 @keyframes down {
- 0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -231,8 +269,8 @@ position: absolute;
 }
 
 a {
-    font-family: 'print clearly';
-    font-weight: 500;
+  font-family: 'print clearly';
+  font-weight: 500;
   text-decoration: none;
   color: #1C3652;
   transition: all 2s;
@@ -318,18 +356,17 @@ textarea {
 
 
 @media (min-width: 768px) {
-    .front {
-  top: 50vh;
-  left: 45vw;
-  font-size: 4em;
-
-}
-    .logo {
-  width: 50vw;
-  position: absolute;
-  left: 20vw;
-  top: 25vh;
-}
+  .front {
+    top: 50vh;
+    left: 45vw;
+    font-size: 4em;
+  }
+  .logo {
+    width: 50vw;
+    position: absolute;
+    left: 20vw;
+    top: 25vh;
+  }
   h1 {
     font-size: 3em;
     padding-top: 3em;
@@ -337,6 +374,9 @@ textarea {
   #recentpiece {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
+    padding: 7em;
+    justify-items: center;
+    grid-gap: 2em;
   }
   /*Menu starts*/
   .appbar,
@@ -353,7 +393,6 @@ textarea {
     display: inline;
     padding: 2em;
     font-size: 1.3em;
-
   }
   .menulogo {
     width: 13vw;
@@ -380,7 +419,6 @@ textarea {
     width: 100%;
     height: 50em
   }
-
   #anim {
     display: initial;
   }
@@ -391,6 +429,7 @@ textarea {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     padding: 10em;
+    grid-gap: 2em;
   }
 }
 
