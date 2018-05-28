@@ -12,22 +12,19 @@ function toggleMenu() {
   bars[2].classList.toggle("rotateUp");
   menu.classList.toggle("hidden");
   appbar.classList.toggle("shadow");
+  window.addEventListener('load', () => {
 
+  });
+
+
+  function showLoader() {
+    let loader = document.querySelector(".container");
+    loader.classList.remove("hiddenloader");
+  }
+
+  function hideLoader() {
+    let loader = document.querySelector(".container");
+    loader.classList.add("hiddenloader");
+
+  }
 }
-
-
-// let temp = document.getElementById('recenttemp');
-// let hover = document.querySelector('.recentitem');
-
-
-// temp.addEventListener("mousover", function() {
-//   handleProjectItemHover(temp, 'block');
-// });
-// temp.addEventListener("mouseout", function() {
-//   handleProjectItemHover(temp, 'none');
-// });
-
-
-// let handleProjectItemHover = function(projectItemElement, option) {
-//   projectItemElement.children[0].style.display = option;
-// }

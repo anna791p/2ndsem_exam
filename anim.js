@@ -1,3 +1,10 @@
+showLoader();
+window.addEventListener('load', () => {
+  hideLoader();
+  document.querySelector(".page").classList.remove("hiddenloader");
+  document.querySelector(".page").classList.remove("hiddenloader");
+});
+
 let i = 0;
 let video = document.querySelector("#anim");
 let vidmobile = document.querySelector("#anim-mobile")

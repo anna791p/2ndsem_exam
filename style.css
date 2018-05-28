@@ -3,14 +3,76 @@
   src: url(fonts/jaapokki/regular/jaapokki-regular.otf)
 }
 
-li,
+@font-face {
+  font-family: 'print clearly';
+  src: url(fonts/printclearly.otf)
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*Loader*/
+
+.svg {
+  position: relative;
+  top: 35vh;
+  left: 45vw;
+  width: 30vh;
+}
+
+.page {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s;
+}
+
+.hiddenloader {
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+}
+
+.container {
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FCD1F7;
+  height: 100vh;
+  width: 100vw;
+  transition: all .3s;
+}
+
+.draw {
+  stroke: black;
+  stroke-width: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite alternate;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/****/
+
 h1,
 h2 {
   font-family: 'jaapokki';
+  font-weight: 100;
 }
 
 h1 {
   text-align: center;
+}
+
+p {
+  font-family: "print clearly";
 }
 
 /*Menu starts*/
@@ -23,12 +85,15 @@ ul>li {
   list-style-type: none;
   text-transform: uppercase;
   line-height: 30px;
-  font-weight: 100;
   font-size: 1.3em;
 }
 
+.appbar,
+.menu {
+  background-color: rgba(252, 209, 247, .8);
+}
+
 .appbar {
-  background-color: rgba(252, 209, 247, .6);
   width: 100vw;
   height: 40px;
   top: 0;
@@ -46,17 +111,43 @@ ul>li {
   z-index: 10;
 }
 
+.dot {
+  animation: down 2.5s ease infinite;
+  position: absolute;
+  top: 85vh;
+  left: 48vw;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(252, 209, 247, .8);
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.dot:hover {
+  animation: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  border: solid #1c3652;
+  border-width: 0 3px 3px 0;
+  padding: 8px;
+  transform: rotate(45deg);
+}
+
 .shadow {
-  box-shadow: 0px 3px 6px rgba(68, 68, 68, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .menu {
   width: 100vw;
-  height: 140px;
+  height: 150px;
   top: 50px;
   left: 0;
   margin: 0;
-  text-align: right;
+  text-align: left;
   transition: all 0.6s;
 }
 
@@ -66,6 +157,7 @@ ul>li {
 
 .menuIcon {
   float: right;
+  top: 0;
   height: 30px;
   margin-top: 10px;
   margin-right: 50px;
@@ -97,29 +189,28 @@ ul>li {
 }
 
 .menulogo {
-  width: 15vw;
+  width: 30vw;
   top: 0;
+  margin-left: 30px;
   position: absolute;
 }
 
 /*Menu ends*/
 
 .logo {
-  width: 50vw;
+  width: 80vw;
   position: absolute;
-  left: 20vw;
+  left: 10vw;
   top: 25vh;
 }
 
 .front {
-  /* display: inline; */
-  /* z-index: 10; */
   position: absolute;
-  top: 50vh;
-  left: 45vw;
   color: #1C3652;
-  font-size: 3.5em;
-  font-weight: 100;
+  text-transform: lowercase;
+  top: 40vh;
+  left: 40vw;
+  font-size: 3em;
 }
 
 .recentitem {
@@ -155,29 +246,29 @@ ul>li {
 }
 
 .menuIcon,
-.arrow {
+.dot {
   cursor: pointer;
 }
 
-.arrow {
-  position: absolute;
-  width: 15vw;
-  top: 80vh;
-  animation: down 3s ease infinite;
-}
-
 @keyframes down {
-  50% {
-    transform: translateY(3vh)
-  }
+  0%,
+  20%,
+  50%,
+  80%,
   100% {
-    transform: translateY(0)
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5vh);
+  }
+  60% {
+    transform: translateY(-3vh);
   }
 }
 
 a {
-  font-weight: 100;
-  text-transform: lowercase;
+  font-family: 'print clearly';
+  font-weight: 500;
   text-decoration: none;
   color: #1C3652;
   transition: all 2s;
@@ -189,14 +280,25 @@ a {
   top: 0;
   left: 0; */
   width: 100vw;
-  opacity: .9;
+  opacity: .5;
 }
 
 #anim {
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
+  .front {
+    top: 50vh;
+    left: 45vw;
+    font-size: 4em;
+  }
+  .logo {
+    width: 50vw;
+    position: absolute;
+    left: 20vw;
+    top: 25vh;
+  }
   h1 {
     font-size: 3em;
     padding-top: 3em;
@@ -225,7 +327,7 @@ a {
     font-size: 1.3em;
   }
   .menulogo {
-    width: 30vw;
+    width: 13vw;
   }
   .menuIcon,
   .menu {
@@ -249,12 +351,6 @@ a {
     width: 100%;
     height: 50em
   }
-  .arrow {
-    top: 80vh;
-    width: 8vw;
-    height: 20vh;
-    left: 43vw;
-  }
   #anim {
     display: initial;
   }
@@ -269,4 +365,4 @@ a {
   }
 }
 
-@media (min-width: 1300px) {}
+@media (min-width: 1024px) {}

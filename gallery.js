@@ -1,3 +1,16 @@
+showLoader()
+
+function showLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.remove("hiddenloader");
+}
+
+function hideLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.add("hiddenloader");
+
+}
+
 function fetchGallery() {
   fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed")
     .then(e => e.json())
@@ -5,13 +18,9 @@ function fetchGallery() {
 }
 
 function showGallery(data) {
+  hideLoader()
   console.log(data)
   data.forEach(showSinglePiece)
-}
-
-
-let handleProjectItemHover = function(projectItemElement, option) {
-  projectItemElement.children[1].style.display = option;
 }
 
 
