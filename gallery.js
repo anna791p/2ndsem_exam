@@ -49,7 +49,11 @@ function showSinglePiece(aPiece) {
   clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
   let gallerylist = document.querySelector("#gallerylist");
+
+  clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
+
   gallerylist.appendChild(clone);
 }
+
 
 fetchGallery();
