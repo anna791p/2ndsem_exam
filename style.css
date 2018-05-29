@@ -435,13 +435,6 @@ textarea {
     display: none;
   }
   /*Menu ends*/
-  /* #recent {
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 10px;
-  } */
-  form {
-    /* padding-top: 150px; */
-  }
   .column_grid {
     display: grid;
     grid-template-columns: 2fr 2fr;
