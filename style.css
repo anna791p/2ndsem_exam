@@ -389,6 +389,27 @@ textarea {
 .regards {
   margin-bottom: 0;
 }
+#recentworks{
+      margin: 0 5em 5em 5em;
+}
+.icons {
+    width: 80px;
+    height: auto;
+    justify-self: end;
+    padding: 1em 0 0 0;
+  }
+
+@media (min-width: 480px) {
+    #recentworks{
+
+    }
+     #recentpiece {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    /*padding: 7em;*/
+    justify-items: center;
+  }
+}
 
 @media (min-width: 768px) {
   .front {
@@ -454,10 +475,10 @@ textarea {
     grid-template-columns: 3fr 3fr;
   }
   .icons {
-    width: 200px;
+    width: 100px;
     height: auto;
     justify-self: end;
-    padding: 1em;
+    padding: 1em 3em;
   }
   .gridimg {
     width: 100%;
