@@ -34,11 +34,6 @@ function buildMenu(data) {
       parentElement.appendChild(li);
       console.log("categories:" + data);
     }
-
-
-
-
-
   })
 
 }
@@ -52,7 +47,7 @@ function fetchGallery() {
   let urlParams = new URLSearchParams(window.location.search);
   let catid = urlParams.get("category");
   console.log("fetchGallery: catid: ", catid);
-  let endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed"
+  let endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed&per_page=100"
   if (catid) {
     let menuItemClick = document.getElementById(catid);
     // menuItemClick.classList.add("active_cat");
@@ -70,13 +65,13 @@ function showGallery(data) {
 }
 
 function showSinglePiece(aPiece) {
-  console.log("aPiece: ", aPiece);
+ console.log("aPiece: ", aPiece);
 
   let template = document.querySelector("#gallerytemp").content;
   let clone = template.cloneNode(true);
   let recentItem = clone.querySelector(".recentitem");
 
-  clone.querySelector(".title").textContent = aPiece.title.rendered;
+ clone.querySelector(".title").innerHTML = aPiece.title.rendered;
   clone.querySelector(".medium").textContent = aPiece.acf.medium;
 
   recentItem.addEventListener("mouseover", function() {
@@ -92,7 +87,7 @@ function showSinglePiece(aPiece) {
 
   let gallerylist = document.querySelector("#gallerylist");
 
-  //clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
+  clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
 
   gallerylist.appendChild(clone);
 }
