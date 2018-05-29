@@ -247,6 +247,7 @@ footer {
 }
 
 .recentitem {
+    display: inline-block;
   margin: 0 0 1em 0;
   width: 100%;
   text-align: center;
@@ -255,7 +256,7 @@ footer {
 }
 
 .hover_content {
-  display: none;
+ display: none;
   background-color: black;
   color: white;
   opacity: .7;
@@ -479,7 +480,7 @@ textarea {
     text-align: center;
   }
   #gallerylist {
-    margin: 0 10em 0 10em;
+    margin: 0 10em 5em 10em;
     column-count: 2;
     column-gap: 1em;
   }
@@ -508,26 +509,22 @@ textarea {
     padding: 20px;
     width: 40vw;
     margin-bottom: 1em;
-}
+  }
   .thanks div p {
     width: 550px;
     position: relative;
     margin-top: 10%;
     left: 30vw;
-}
-
+  }
   .thanks img {
     width: 25vw;
     position: relative;
     left: 35vw;
+  }
+  p.regards {
+    margin-top: 0;
+  }
 }
-
-    p.regards {
-        margin-top: 0;
-    }
-
-
-/*form ends*/
 
 @media (min-width: 1024px) {
   #gallerylist {
