@@ -35,10 +35,6 @@ function buildMenu(data) {
       console.log("categories:" + data);
     }
 
-
-
-
-
   })
 
 }
@@ -92,7 +88,7 @@ function showSinglePiece(aPiece) {
 
   let gallerylist = document.querySelector("#gallerylist");
 
-  clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
+  clone.querySelector(".more").href = "subpage.html?id=" + aPiece.id;
 
   gallerylist.appendChild(clone);
 }
