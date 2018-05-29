@@ -64,12 +64,13 @@ img {
 
 h1,
 h2 {
+    color: #1c3652;
   font-family: 'jaapokki';
   font-weight: 100;
 }
 .rw{
     margin:0;
-    font-size:3em;
+    font-size:2em;
     text-transform: uppercase;
 }
 h1 {
@@ -258,7 +259,6 @@ footer {
 .hover_content {
  display: none;
   background-color: black;
-  color: white;
   opacity: .7;
   top: 0;
   position: absolute;
@@ -266,7 +266,12 @@ footer {
   right: 0;
   bottom: 0;
 }
-
+.medium{
+    font-size: 1.2em;
+}
+.title, .medium{
+    color:white;
+}
 .text {
   position: absolute;
   height: 100%;
@@ -290,9 +295,16 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: #1C3652;
-  transition: all 2s;
+  transition: all .3s;
+    display: inline-block;
 }
+li a:hover{
+  transform: translate(1px,-5px);
+}
+li a:active{
+    transform: translate(1px,-5px);
 
+}
 #anim,
 #anim-mobile {
   /* position: absolute;
@@ -312,15 +324,18 @@ a {
   grid-template-columns: 1fr;
   text-align: center;
 }
+.back{
+    font-family: 'jaapokki';
+    font-size: 1.5em;
+    float:right;
+}
+
 img-more{
     width: 100%;
 }
 
 .subgrid {
-    grid-gap: 1em;
     text-align: left;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
 }
 .subgrid >div{
     align-self: center;}
@@ -329,7 +344,7 @@ img-more{
     padding:.5em;
 }
 .desc-more{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .intouch {
@@ -415,11 +430,17 @@ textarea {
 
  #recentpiece {
     margin:3em 8em 8em 8em;
+         align-items: center;
   }
 .title-more{
     padding:0;
 }
-
+.about{
+    margin: 0 3em;
+}
+.column_grid {
+    margin-top: 3em;
+  }
 @media (min-width: 480px) {
     .menulogo {
         width: 15vw;}
@@ -428,10 +449,23 @@ textarea {
     column-count: 2;
     column-gap: 1em;
   }
-
+.about{
+    margin: 0 5em;
+}
+    .rw{
+    font-size:3em;
+}
 }
 
 @media (min-width: 768px) {
+    .subgrid {
+    grid-gap: 1em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+    .desc-more{
+    font-size: 1.5em;
+}
   .front {
     top: 50vh;
     left: 45vw;
