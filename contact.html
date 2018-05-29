@@ -46,31 +46,33 @@
 
   <h1>Contact</h1>
   <p>If you'd like to get in touch, you can send me a message below. You can also follow me on Instagram and Facebook!</p>
+  <div class="form_grid">
+    <div class="form">
+      <form action="http://annabellegoldsworthy.com/kea/exam_2/sendEmail.php"
+        method="POST">
+        <!-- insert php site -->
+        <!--Name:-->
+        <label for="name">Name</label>
+        <input type="text"
+          name="name"><br>
+        <!--Email:-->
+        <label for="email">Email</label>
+        <input type="email"
+          name="email"><br>
+        <!-- Subject:-->
+        <label for="subject">Subject</label>
+        <input type="text"
+          name="subject"><br>
+        <!-- Message:-->
+        <label for="message">Message</label>
+        <textarea name="message"
+          id=""></textarea>
+        <!--cols="30" rows="10"-->
+        <input type="submit">
 
-  <div class="form">
-    <form action="http://annabellegoldsworthy.com/kea/exam_2/sendEmail.php"
-      method="POST">
-      <!-- insert php site -->
-      <!--Name:-->
-      <label for="name">Name</label>
-      <input type="text"
-        name="name"><br>
-      <!--Email:-->
-      <label for="email">Email</label>
-      <input type="email"
-        name="email"><br>
-      <!-- Subject:-->
-      <label for="subject">Subject</label>
-      <input type="text"
-        name="subject"><br>
-      <!-- Message:-->
-      <label for="message">Message</label>
-      <textarea name="message"
-        id=""></textarea>
-      <!--cols="30" rows="10"-->
-      <input type="submit">
+      </form>
+    </div>
 
-    </form>
   </div>
   <footer>
     <div>
