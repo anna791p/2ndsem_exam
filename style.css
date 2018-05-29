@@ -247,6 +247,7 @@ footer {
 }
 
 .recentitem {
+    display: inline-block;
   margin: 0 0 1em 0;
   width: 100%;
   text-align: center;
@@ -255,7 +256,7 @@ footer {
 }
 
 .hover_content {
-  display: none;
+ display: none;
   background-color: black;
   color: white;
   opacity: .7;
@@ -473,14 +474,14 @@ textarea {
     text-align: center;
   }
   #gallerylist {
-    margin: 0 10em 0 10em;
+    margin: 0 10em 5em 10em;
     column-count: 2;
     column-gap: 1em;
   }
-}
 
 .title-more {
   grid-column: 1/-1;
+}
 }
 
 @media (min-width: 1024px) {
