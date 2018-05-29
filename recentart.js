@@ -45,7 +45,7 @@ function showSinglePiece(aPiece) {
   let clone = template.cloneNode(true);
   let recentItem = clone.querySelector(".recentitem");
 
-  clone.querySelector(".title").textContent = aPiece.title.rendered;
+  clone.querySelector(".title").innerHTML = aPiece.title.rendered;
   clone.querySelector(".medium").textContent = aPiece.acf.medium;
 
   recentItem.setAttribute("id", aPiece.id);
