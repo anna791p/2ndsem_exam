@@ -476,9 +476,6 @@ textarea {
     margin: 0 10em 0 10em;
     column-count: 2;
     column-gap: 1em;
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-gap: 2em;
   }
 }
 
