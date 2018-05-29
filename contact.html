@@ -34,30 +34,44 @@
   <rect class="myrect" x="10" y="50" width="80" height="10"/>
 </svg>
   </header>
+
   <aside class="menu hidden">
     <ul>
+      <li><a href="index.html">HOME</a></li>
       <li><a href="artwork.html">ARTWORK</a></li>
       <li><a href="about.html">ABOUT</a></li>
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </aside>
 
-  <form action="http://annabellegoldsworthy.com/kea/exam_2/sendEmail.php"
-    method="POST">
-    <!-- insert php site -->
-    Name:
-    <input type="text"
-      name="name"><br> Email:
-    <input type="email"
-      name="email"><br> Subject:
-    <input type="text"
-      name="subject"><br> Message:
-    <textarea name="message"
-      id=""
-      cols="30"
-      rows="10"></textarea>
-    <input type="submit">
-  </form>
+  <h1>Contact</h1>
+  <p>If you'd like to get in touch, you can send me a message below. You can also follow me on Instagram and Facebook!</p>
+
+  <div class="form">
+    <form action="http://annabellegoldsworthy.com/kea/exam_2/sendEmail.php"
+      method="POST">
+      <!-- insert php site -->
+      <!--Name:-->
+      <label for="name">Name</label>
+      <input type="text"
+        name="name"><br>
+      <!--Email:-->
+      <label for="email">Email</label>
+      <input type="email"
+        name="email"><br>
+      <!-- Subject:-->
+      <label for="subject">Subject</label>
+      <input type="text"
+        name="subject"><br>
+      <!-- Message:-->
+      <label for="message">Message</label>
+      <textarea name="message"
+        id=""></textarea>
+      <!--cols="30" rows="10"-->
+      <input type="submit">
+
+    </form>
+  </div>
   <footer>
     <div>
       <p>Sveinn Snær,Illustrator<br> Arts University Bournemouth<br> email@email.uk

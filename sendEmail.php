@@ -11,7 +11,7 @@ $headers = 'From: hello@annabellegoldsworthy.com' . "\r\n" . //why do we put in 
     'X-Mailer: PHP/' . phpversion();
 
 if(mail($to, $subject, $message, $headers)){
-    header("Location: index.html");
+    header("Location: thanks.html");
 } else {
     echo "Failure to send";
 }
