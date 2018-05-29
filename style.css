@@ -239,6 +239,7 @@ footer {
 }
 
 #gallerylist {
+      text-align: center;
   margin: 3em 5em;
   column-count: 1;
 }
@@ -298,13 +299,12 @@ a {
   transition: all .3s;
     display: inline-block;
 }
-li a:hover{
+li a:hover, .active{
   transform: translate(1px,-5px);
+    /*text-decoration: underline;*/
 }
-li a:active{
-    transform: translate(1px,-5px);
 
-}
+
 #anim,
 #anim-mobile {
   /* position: absolute;
@@ -430,7 +430,7 @@ textarea {
 
  #recentpiece {
     margin:3em 8em 8em 8em;
-         align-items: center;
+     text-align: center;
   }
 .title-more{
     padding:0;
@@ -482,7 +482,7 @@ textarea {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     justify-items: center;
-    grid-gap: 2em;
+    grid-gap: 1em;
   }
   /*Menu starts*/
   .appbar,
@@ -590,11 +590,15 @@ textarea {
   }
 }
 
+
 @media (min-width: 1024px) {
   #gallerylist {
     column-count: 3;
   }
   .intouch {
     padding: 0em 4.5em 0.1em 4.5em;
+  }
+    #recentpiece {
+    margin:3em 10em 10em 10em;
   }
 }
