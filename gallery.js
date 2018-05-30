@@ -41,6 +41,7 @@ function buildMenu(data) {
 
 let page = 1;
 let lookingForData = false;
+let categoryIdSelected = null;
 
 
 function fetchGallery() {
@@ -50,9 +51,10 @@ function fetchGallery() {
   console.log("fetchGallery: catid: ", catid);
   let endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed"
   if (catid) {
-    let menuItemClick = document.getElementById(catid);
-    // menuItemClick.classList.add("active_cat");
+    categoryIdSelected = catid;
     endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed" + "&categories=" + catid
+  } else {
+    categoryIdSelected = null;
   }
   fetch(endpoint)
     .then(e => e.json())
@@ -63,6 +65,13 @@ function showGallery(data) {
   hideLoader();
   console.log(data);
   data.forEach(showSinglePiece);
+
+  if (categoryIdSelected) {
+    let menuItemClick = document.getElementById(categoryIdSelected);
+    console.log("fetchGallery: menuItemClick: ", menuItemClick);
+    menuItemClick.classList.add("active_cat");
+    endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed" + "&categories=" + categoryIdSelected
+  }
 }
 
 function showSinglePiece(aPiece) {

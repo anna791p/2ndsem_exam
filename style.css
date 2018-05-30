@@ -128,6 +128,14 @@ footer {
   z-index: 10;
 }
 
+.active_cat {
+  text-decoration: underline;
+}
+
+.tags li.active_cat a {
+  text-decoration: underline;
+}
+
 .dot {
   animation: down 2.5s ease infinite;
   position: absolute;
@@ -247,6 +255,7 @@ footer {
 }
 
 .recentitem {
+  display: inline-block;
   margin: 0 0 1em 0;
   width: 100%;
   text-align: center;
@@ -466,14 +475,13 @@ textarea {
     text-align: center;
   }
   #gallerylist {
-    margin: 0 10em 0 10em;
+    margin: 0 10em 5em 10em;
     column-count: 2;
     column-gap: 1em;
   }
-}
-
-.title-more {
-  grid-column: 1/-1;
+  .title-more {
+    grid-column: 1/-1;
+  }
 }
 
 @media (min-width: 1024px) {
