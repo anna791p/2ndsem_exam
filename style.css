@@ -115,12 +115,11 @@ footer {
 }
 
 footer {
-  width: 100%;
+  /* width: 100%; */
   font-family: 'print clearly';
   text-decoration: none;
   color: #1C3652;
   font-size: 1.4em;
-  /*1.5em*/
   /* padding: 1em; */
 }
 
@@ -523,6 +522,7 @@ iframe {
   }
   .rw {
     font-size: 3em;
+    padding-top: 2em;
   }
 }
 
@@ -532,9 +532,10 @@ iframe {
     z-index: -1;
     position: absolute;
     width: 25%;
-    top: 35vh;
+    top: 30vh;
     left: 15vw;
     animation: hithere 1s ease-out forwards 1.5s;
+    overflow: hidden;
   }
   @keyframes hithere {
     100% {
@@ -614,6 +615,7 @@ iframe {
   footer {
     display: grid;
     grid-template-columns: 3fr 3fr;
+    height: 96px;
   }
   .icons {
     width: 100px;
@@ -625,7 +627,6 @@ iframe {
     display: grid;
     grid-template-columns: 3fr 3fr;
     grid-gap: 2em;
-    padding: 3em;
   }
   .venus_img img {
     width: 365px;
@@ -670,5 +671,6 @@ iframe {
   }
   .about {
     margin: 0 10em;
+    min-height: 80vh;
   }
 }
