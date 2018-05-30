@@ -105,6 +105,10 @@ footer {
     font-size: 1em;
   background-color: rgba(252, 209, 247, .8);
 }
+.foot{
+    font-size: 1em;
+    margin:.5em;
+}
 
 footer {
   width: 100%;
