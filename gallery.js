@@ -1,4 +1,3 @@
-
 showLoader()
 
 let handleProjectItemHover = function(projectItemElement, option) {
@@ -13,7 +12,7 @@ fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/categories")
 function buildMenu(data) {
   let parentElement = document.querySelector(".tags");
   data.forEach(item => {
-    console.log(item);
+    // console.log(item);
     if (item.name !== "Uncategorised") {
       let li = document.createElement("li");
       let a = document.createElement("a");
@@ -22,10 +21,10 @@ function buildMenu(data) {
       a.href = "artwork.html?category=" + item.id;
       li.appendChild(a);
       parentElement.appendChild(li);
-      console.log("categories:" + data);
+      // console.log("categories:" + data);
     }
   })
-
+  fetchGallery();
 }
 
 let page = 1;
@@ -54,17 +53,20 @@ function showGallery(data) {
   hideLoader();
   console.log(data);
   data.forEach(showSinglePiece);
+  console.log("showGallery categoryIdSelected", categoryIdSelected);
 
   if (categoryIdSelected) {
     let menuItemClick = document.getElementById(categoryIdSelected);
-    console.log("fetchGallery: menuItemClick: ", menuItemClick);
+    console.log("showGallery: menuItemClick: ", menuItemClick);
+
     menuItemClick.classList.add("active_cat");
+
     endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed" + "&categories=" + categoryIdSelected
   }
 }
 
 function showSinglePiece(aPiece) {
-  console.log("aPiece: ", aPiece);
+  // console.log("aPiece: ", aPiece);
 
   let template = document.querySelector("#gallerytemp").content;
   let clone = template.cloneNode(true);
@@ -74,11 +76,11 @@ function showSinglePiece(aPiece) {
   clone.querySelector(".medium").textContent = aPiece.acf.medium;
 
   recentItem.addEventListener("mouseover", function() {
-    console.log('mouseover recentItem: ', recentItem);
+    // console.log('mouseover recentItem: ', recentItem);
     handleProjectItemHover(recentItem, 'block');
   });
   recentItem.addEventListener("mouseout", function() {
-    console.log('mouseout recentItem: ', recentItem);
+    // console.log('mouseout recentItem: ', recentItem);
     handleProjectItemHover(recentItem, 'none');
   });
 
@@ -90,5 +92,3 @@ function showSinglePiece(aPiece) {
 
   gallerylist.appendChild(clone);
 }
-
-fetchGallery();
