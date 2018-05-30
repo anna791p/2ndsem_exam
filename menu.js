@@ -17,3 +17,14 @@ function toggleMenu() {
   });
 
 }
+function showLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.remove("hiddenloader");
+}
+
+function hideLoader() {
+  let loader = document.querySelector(".container");
+  loader.classList.add("hiddenloader");
+
+}
+
