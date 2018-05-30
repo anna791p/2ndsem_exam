@@ -20,11 +20,12 @@ img {
 
 /*Loader*/
 
-.svg {
+.venus {
   position: relative;
-  top: 35vh;
-  left: 45vw;
-  width: 30vh;
+  top: 25vh;
+  left: 40vw;
+  width: 20vw;
+  animation: rotate .5s infinite ease;
 }
 
 .page {
@@ -34,9 +35,8 @@ img {
 }
 
 .hiddenloader {
-  opacity: 0;
   display: none;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
+  transition: 1s all;
 }
 
 .container {
@@ -50,17 +50,12 @@ img {
   transition: all .3s;
 }
 
-.draw {
-  stroke: black;
-  stroke-width: 1;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
-  animation: dash 3s linear infinite alternate;
-}
-
-@keyframes dash {
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
   to {
-    stroke-dashoffset: 0;
+    transform: rotate(360deg);
   }
 }
 
@@ -68,8 +63,15 @@ img {
 
 h1,
 h2 {
+  color: #1c3652;
   font-family: 'jaapokki';
   font-weight: 100;
+}
+
+.rw {
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -79,7 +81,8 @@ h1 {
 
 p {
   font-family: "print clearly";
-  font-size: 1.1em;
+  font-size: 1.3em;
+  /*1.1em*/
 }
 
 /*Menu starts*/
@@ -106,7 +109,8 @@ footer {
   font-family: 'print clearly';
   text-decoration: none;
   color: #1C3652;
-  font-size: 1.5em;
+  font-size: 1.4em;
+  /*1.5em*/
   padding: 1em;
 }
 
@@ -246,7 +250,8 @@ footer {
 }
 
 #gallerylist {
-  margin: 5em;
+  text-align: center;
+  margin: 3em 5em;
   column-count: 1;
 }
 
@@ -266,13 +271,21 @@ footer {
 .hover_content {
   display: none;
   background-color: black;
-  color: white;
   opacity: .7;
   top: 0;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.medium {
+  font-size: 1.2em;
+}
+
+.title,
+.medium {
+  color: white;
 }
 
 .text {
@@ -298,7 +311,14 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: #1C3652;
-  transition: all 2s;
+  transition: all .3s;
+  display: inline-block;
+}
+
+li a:hover,
+.active {
+  transform: translate(1px, -5px);
+  /*text-decoration: underline;*/
 }
 
 #anim,
@@ -315,24 +335,50 @@ a {
 }
 
 .subpagegrid {
+  margin: 4em 5em;
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
 }
 
+.back {
+  font-family: 'jaapokki';
+  font-size: 1.5em;
+  float: right;
+}
+
+img-more {
+  width: 100%;
+}
+
 .subgrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  text-align: left;
 }
 
-img.alignnone {
-  display: inline-block;
-  width: 50%;
-  height: 50%;
+.subgrid>div {
+  align-self: center;
 }
 
-form {
-  padding-top: 100px;
+.sub {
+  padding: .5em;
+}
+
+.desc-more {
+  font-size: 1em;
+}
+
+.intouch {
+  padding: 0em 1em;
+}
+
+/*form starts*/
+
+div.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  /*e1e3e5*/
+  padding: 10px;
+  margin: 0px 5px 5px 5px;
 }
 
 label {
@@ -346,25 +392,27 @@ select {
   width: 100%;
   height: 2em;
   border: none;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  padding: 0;
 }
 
 input[type=email] {
   width: 100%;
   height: 2em;
   border: none;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  padding: 0;
 }
 
 input[type=submit] {
   width: 100%;
   height: 3em;
   border: none;
-  background-color: pink;
-}
-
-div.form {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  /* padding: 20px; */
+  background-color: #f4c101;
+  padding: 0;
+  margin-top: 0.5em;
 }
 
 textarea {
@@ -372,7 +420,10 @@ textarea {
   width: 100%;
   height: 20vh;
   border: none;
+  padding: 0;
 }
+
+/*form ends*/
 
 .thanks {
   background-color: rgba(252, 209, 247, 1)
@@ -380,8 +431,8 @@ textarea {
 
 .thanks div p {
   font-size: 2em;
-  position: relative;
-  left: 10px;
+  padding: 0px 20px;
+  margin-top: 70px;
 }
 
 .thanks img {
@@ -392,13 +443,62 @@ textarea {
 
 .thanks a {
   border-bottom: 2px solid black;
+  transition: none;
 }
 
 .regards {
   margin-bottom: 0;
 }
 
+.icons {
+  width: 80px;
+  height: auto;
+  justify-self: end;
+  padding: 1em 0 0 0;
+}
+
+#recentpiece {
+  margin: 3em 8em 8em 8em;
+  text-align: center;
+}
+
+.title-more {
+  padding: 0;
+}
+
+.about {
+  margin: 0 3em;
+}
+
+.column_grid {
+  margin-top: 3em;
+}
+
+@media (min-width: 480px) {
+  .menulogo {
+    width: 15vw;
+  }
+  #gallerylist {
+    column-count: 2;
+    column-gap: 1em;
+  }
+  .about {
+    margin: 0 5em;
+  }
+  .rw {
+    font-size: 3em;
+  }
+}
+
 @media (min-width: 768px) {
+  .subgrid {
+    grid-gap: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .desc-more {
+    font-size: 1.5em;
+  }
   .front {
     top: 50vh;
     left: 45vw;
@@ -410,15 +510,11 @@ textarea {
     left: 20vw;
     top: 25vh;
   }
-  h1 {
-    font-size: 3em;
-  }
   #recentpiece {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
-    padding: 7em;
     justify-items: center;
-    grid-gap: 2em;
+    grid-gap: 1em;
   }
   /*Menu starts*/
   .appbar,
@@ -438,27 +534,32 @@ textarea {
   }
   .menulogo {
     width: 8vw;
+    top: 1vh;
   }
   .menuIcon,
   .menu {
     display: none;
   }
   /*Menu ends*/
+  /* #recent {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+  } */
   .column_grid {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 1em;
-    padding: 3em;
+    margin: 3em;
   }
   footer {
     display: grid;
     grid-template-columns: 3fr 3fr;
   }
   .icons {
-    width: 200px;
+    width: 100px;
     height: auto;
     justify-self: end;
-    padding: 1em;
+    padding: 1em 3em;
   }
   .gridimg {
     width: 100%;
@@ -475,8 +576,7 @@ textarea {
     text-align: center;
   }
   #gallerylist {
-    margin: 0 10em 5em 10em;
-    column-count: 2;
+    margin: 3em 10em 5em 10em;
     column-gap: 1em;
   }
   .title-more {
@@ -487,5 +587,11 @@ textarea {
 @media (min-width: 1024px) {
   #gallerylist {
     column-count: 3;
+  }
+  .intouch {
+    padding: 0em 4.5em 0.1em 4.5em;
+  }
+  #recentpiece {
+    margin: 3em 10em 10em 10em;
   }
 }
