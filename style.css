@@ -436,10 +436,30 @@ textarea {
     padding:0;
 }
 .about{
-    margin: 0 3em;
+    margin: 0 10em;
+}
+.column_grid>p{
+  margin: 1em 0 1em 1em;
+    align-self: center;
+
+}
+iframe{
+    width: 100%;
+    z-index: 1;
+}
+.hi{
+    z-index:-1;
+    position:absolute;
+    width: 25%;
+    top:35vh;
+    left: 15vw;
+     animation: hithere 1s ease-out forwards 1.5s;
+}
+@keyframes hithere{
+    100%{transform:translateY(-10vh) translateX(-10vw) rotate(-30deg);}
 }
 .column_grid {
-    margin-top: 3em;
+    margin: 3em 0 3em 0;
   }
 @media (min-width: 480px) {
     .menulogo {
@@ -502,8 +522,8 @@ textarea {
   }
   .menulogo {
     width: 8vw;
-      top:1vh;
   }
+
   .menuIcon,
   .menu {
     display: none;
@@ -518,7 +538,6 @@ textarea {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 1em;
-    margin: 3em;
   }
   footer {
     display: grid;
@@ -601,4 +620,8 @@ textarea {
     #recentpiece {
     margin:3em 10em 10em 10em;
   }
+    .about{
+        margin:0 10em;
+    }
+
 }
