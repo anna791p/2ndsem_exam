@@ -1,4 +1,3 @@
-
 showLoader()
 
 let handleProjectItemHover = function(projectItemElement, option) {
@@ -13,7 +12,7 @@ fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/categories")
 function buildMenu(data) {
   let parentElement = document.querySelector(".tags");
   data.forEach(item => {
-    console.log(item);
+    // console.log(item);
     if (item.name !== "Uncategorised") {
       let li = document.createElement("li");
       let a = document.createElement("a");
@@ -22,14 +21,15 @@ function buildMenu(data) {
       a.href = "artwork.html?category=" + item.id;
       li.appendChild(a);
       parentElement.appendChild(li);
-      console.log("categories:" + data);
+      // console.log("categories:" + data);
     }
   })
-
+  fetchGallery();
 }
 
 let page = 1;
 let lookingForData = false;
+let categoryIdSelected = null;
 
 
 function fetchGallery() {
@@ -39,9 +39,10 @@ function fetchGallery() {
   console.log("fetchGallery: catid: ", catid);
   let endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed&per_page=100"
   if (catid) {
-    let menuItemClick = document.getElementById(catid);
-    // menuItemClick.classList.add("active_cat");
+    categoryIdSelected = catid;
     endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed" + "&categories=" + catid
+  } else {
+    categoryIdSelected = null;
   }
   fetch(endpoint)
     .then(e => e.json())
@@ -52,24 +53,34 @@ function showGallery(data) {
   hideLoader();
   console.log(data);
   data.forEach(showSinglePiece);
+  console.log("showGallery categoryIdSelected", categoryIdSelected);
+
+  if (categoryIdSelected) {
+    let menuItemClick = document.getElementById(categoryIdSelected);
+    console.log("showGallery: menuItemClick: ", menuItemClick);
+
+    menuItemClick.classList.add("active_cat");
+
+    endpoint = "http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist?_embed" + "&categories=" + categoryIdSelected
+  }
 }
 
 function showSinglePiece(aPiece) {
- console.log("aPiece: ", aPiece);
+  // console.log("aPiece: ", aPiece);
 
   let template = document.querySelector("#gallerytemp").content;
   let clone = template.cloneNode(true);
   let recentItem = clone.querySelector(".recentitem");
 
- clone.querySelector(".title").innerHTML = aPiece.title.rendered;
+  clone.querySelector(".title").innerHTML = aPiece.title.rendered;
   clone.querySelector(".medium").textContent = aPiece.acf.medium;
 
   recentItem.addEventListener("mouseover", function() {
-    console.log('mouseover recentItem: ', recentItem);
+    // console.log('mouseover recentItem: ', recentItem);
     handleProjectItemHover(recentItem, 'block');
   });
   recentItem.addEventListener("mouseout", function() {
-    console.log('mouseout recentItem: ', recentItem);
+    // console.log('mouseout recentItem: ', recentItem);
     handleProjectItemHover(recentItem, 'none');
   });
 
@@ -77,9 +88,7 @@ function showSinglePiece(aPiece) {
 
   let gallerylist = document.querySelector("#gallerylist");
 
-  clone.querySelector(".more").href="subpage.html?id=" + aPiece.id;
+  clone.querySelector(".more").href = "subpage.html?id=" + aPiece.id;
 
   gallerylist.appendChild(clone);
 }
-
-fetchGallery();
