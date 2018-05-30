@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+.intouch a {
+  color: blue;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -112,6 +116,21 @@ footer {
   font-size: 1.4em;
   /*1.5em*/
   /* padding: 1em; */
+}
+
+.icons {
+  width: 60%;
+  height: auto;
+  justify-self: end;
+  padding: 1em 0 0 0;
+}
+
+.intouch {
+  padding: 2em;
+}
+
+footer p {
+  padding-left: 1em;
 }
 
 .appbar {
@@ -367,10 +386,6 @@ img-more {
   font-size: 1em;
 }
 
-.intouch {
-  padding: 0em 1em;
-}
-
 /*form starts*/
 
 div.form {
@@ -379,6 +394,8 @@ div.form {
   /*e1e3e5*/
   padding: 10px;
   margin: 0px 5px 5px 5px;
+  width: 65vw;
+  margin: 0 auto;
 }
 
 label {
@@ -450,13 +467,6 @@ textarea {
   margin-bottom: 0;
 }
 
-.icons {
-  width: 80px;
-  height: auto;
-  justify-self: end;
-  padding: 1em 0 0 0;
-}
-
 #recentpiece {
   margin: 3em 8em 8em 8em;
   text-align: center;
@@ -504,6 +514,9 @@ textarea {
     left: 45vw;
     font-size: 4em;
   }
+  div.form {
+    width: 40vw;
+  }
   .logo {
     width: 50vw;
     position: absolute;
@@ -515,6 +528,15 @@ textarea {
     grid-template-columns: 2fr 2fr 2fr;
     justify-items: center;
     grid-gap: 1em;
+  }
+  .icons {
+    width: 80px;
+    height: auto;
+    justify-self: end;
+    padding: 1em 0 0 0;
+  }
+  .intouch {
+    padding: 0em 1em;
   }
   /*Menu starts*/
   .appbar,
@@ -560,6 +582,20 @@ textarea {
     height: auto;
     justify-self: end;
     padding: 1em 3em;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-gap: 2em;
+    padding: 3em;
+  }
+  .venus_img img {
+    width: 365px;
+    height: 300px;
+    padding-left: 10em;
+  }
+  .venus_img {
+    display: inline-block;
   }
   .gridimg {
     width: 100%;
