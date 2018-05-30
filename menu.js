@@ -1,4 +1,5 @@
-let menuOpen = false;
+window.addEventListener('load',()=>{
+    let menuOpen = false;
 let menuIcon = document.querySelector(".menuIcon")
 let menu = document.querySelector(".menu");
 let bars = menuIcon.querySelectorAll("rect");
@@ -17,6 +18,7 @@ function toggleMenu() {
   });
 
 }
+})
 function showLoader() {
   let loader = document.querySelector(".container");
   loader.classList.remove("hiddenloader");
