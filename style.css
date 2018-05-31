@@ -283,10 +283,6 @@ footer p {
   width: 100%;
 }
 
-.sub {
-  min-height: 80vh;
-}
-
 .recentitem {
   display: inline-block;
   margin: 0 0 1em 0;
@@ -621,6 +617,9 @@ iframe {
     grid-template-columns: 3fr 3fr;
     height: 96px;
   }
+  .height_holder {
+    min-height: 88vh;
+  }
   .icons {
     width: 100px;
     height: auto;
@@ -675,6 +674,6 @@ iframe {
   }
   .about {
     margin: 0 10em;
-    min-height: 80vh;
+    min-height: 83vh;
   }
 }
