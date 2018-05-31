@@ -21,10 +21,12 @@ showLoader();
         if(aArt.acf.size == 0){
            document.querySelector(".size-more").style.display = "none";
         }
-if (aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large) { //img is there
+         document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)}
+
+/*if (aArt._embedded["wp:featuredmedia"].media_details.sizes.large) { //img is there
      document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url)}
 
-        /*else{
+        else{
            document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.medum.source_url)} */
 
 
@@ -32,4 +34,3 @@ if (aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large) { //img is 
 
 
 
-    }

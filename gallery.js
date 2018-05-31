@@ -84,7 +84,7 @@ function showSinglePiece(aPiece) {
     handleProjectItemHover(recentItem, 'none');
   });
 
-  clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+  clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
 
   let gallerylist = document.querySelector("#gallerylist");
 
