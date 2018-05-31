@@ -575,6 +575,8 @@ iframe {
     height: auto;
     justify-self: end;
     padding: 1em 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .intouch {
     padding: 0em 1em;
