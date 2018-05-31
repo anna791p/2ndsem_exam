@@ -1,5 +1,6 @@
 let urlParams = new URLSearchParams(window.location.search);
-let id = urlParams.get("id");
+let id = urlParams.get("id")
+showLoader();
 
 
     fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist/"+ id + "?_embed")
@@ -7,6 +8,7 @@ let id = urlParams.get("id");
     .then(showSingleArt)
 
     function showSingleArt(aArt){
+        hideLoader();
         console.log("aArt")
 
           document.querySelector(".title-more").innerHTML = aArt.title.rendered;
