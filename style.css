@@ -224,6 +224,7 @@ animation: back 2.5s ease infinite;
     transform: translateX(-3vh) rotate(90deg);
   }
 }
+
 .know-more{
     text-align: right;
     margin-left: 2em;
