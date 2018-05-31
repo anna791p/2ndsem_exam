@@ -177,8 +177,21 @@ footer p {
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.23));
 }
 
-.dot:hover {
+.dot:hover, .dot-back:hover {
   animation: 0;
+}
+.dot-back{
+animation: back 2.5s ease infinite;
+  position: absolute;
+  top: 80px;
+  left: 5vw;
+  width: 0;
+  height: 0;
+    transform: rotate(90deg);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid rgba(252, 209, 247);
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.23));
 }
 
 @keyframes down {
@@ -187,7 +200,7 @@ footer p {
   50%,
   80%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) ;
   }
   40% {
     transform: translateY(-5vh);
@@ -195,6 +208,29 @@ footer p {
   60% {
     transform: translateY(-3vh);
   }
+}
+@keyframes back {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(0) rotate(90deg);
+  }
+  40% {
+    transform: translateX(-5vh) rotate(90deg);
+  }
+  60% {
+    transform: translateX(-3vh) rotate(90deg);
+  }
+}
+
+.know-more{
+    text-align: right;
+    margin-left: 2em;
+}
+.to-cont{
+    font-family: 'jaapokki';
 }
 
 .shadow {
@@ -279,9 +315,7 @@ footer p {
   column-count: 1;
 }
 
-.artworkimg {
-  width: 100%;
-}
+
 
 .recentitem {
   display: inline-block;
@@ -340,7 +374,7 @@ a {
 }
 
 li a:hover,
-.active {
+.active, .to-cont:hover {
   transform: translate(1px, -5px);
   /*text-decoration: underline;*/
 }
@@ -365,14 +399,15 @@ li a:hover,
   text-align: center;
 }
 
-.back {
-  font-family: 'jaapokki';
-  font-size: 1.5em;
-  float: right;
-}
+
 
 img-more {
-  width: 100%;
+  width: 400px;
+}
+
+.subsub{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .subgrid {
@@ -493,6 +528,9 @@ iframe {
 .title-more {
   padding: 0;
 }
+.price-more{
+    text-align: right;
+}
 
 .about {
   margin: 0 3em;
@@ -505,8 +543,16 @@ iframe {
 .hi {
   display: none;
 }
-
+.artworkimg{
+width:50vw;
+}
 @media (min-width: 480px) {
+    .artworkimg{
+width:40vw;
+}
+    .subrgrid{
+        padding: 2em;
+    }
   .menulogo {
     width: 15vw;
   }
@@ -524,6 +570,9 @@ iframe {
 }
 
 @media (min-width: 768px) {
+    .artworkimg{
+width:30vw;
+}
   .hi {
     display: initial;
     z-index: -1;
@@ -540,12 +589,13 @@ iframe {
     }
   }
   .subgrid {
+      padding: 2em;
     grid-gap: 1em;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .desc-more {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   .front {
     top: 50vh;
@@ -662,6 +712,9 @@ iframe {
 }
 
 @media (min-width: 1024px) {
+    .artworkimg{
+width:25vw;
+}
   #gallerylist {
     column-count: 3;
   }

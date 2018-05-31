@@ -16,8 +16,18 @@ let id = urlParams.get("id");
          if(aArt.acf.price == 0){
               document.querySelector(".price-more").style.display = "none";
               }
- document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url)
-        document.querySelector(".size-more").textContent = aArt.acf.size;
+        if(aArt.acf.size == 0){
+           document.querySelector(".size-more").style.display = "none";
+        }
+if (aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large) { //img is there
+     document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url)}
+
+        /*else{
+           document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.medum.source_url)} */
+
+
+
+
 
 
     }
