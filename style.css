@@ -279,9 +279,7 @@ footer p {
   column-count: 1;
 }
 
-.artworkimg {
-  width: 100%;
-}
+
 
 .recentitem {
   display: inline-block;
@@ -340,7 +338,7 @@ a {
 }
 
 li a:hover,
-.active {
+.active, .back:hover {
   transform: translate(1px, -5px);
   /*text-decoration: underline;*/
 }
@@ -372,7 +370,10 @@ li a:hover,
 }
 
 img-more {
-  width: 100%;
+  width: 400px;
+}
+.artworkimg{
+
 }
 
 .subgrid {
@@ -507,6 +508,9 @@ iframe {
 }
 
 @media (min-width: 480px) {
+    .subrgrid{
+        padding: 2em;
+    }
   .menulogo {
     width: 15vw;
   }
@@ -543,12 +547,13 @@ iframe {
     }
   }
   .subgrid {
+      padding: 2em;
     grid-gap: 1em;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .desc-more {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   .front {
     top: 50vh;
