@@ -1,5 +1,6 @@
 let urlParams = new URLSearchParams(window.location.search);
-let id = urlParams.get("id");
+let id = urlParams.get("id")
+showLoader();
 
 
 fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist/" + id + "?_embed")
@@ -7,6 +8,7 @@ fetch("http://valsdottir.net/kea/07-cms/wordpress/wp-json/wp/v2/artist/" + id + 
   .then(showSingleArt)
 
 function showSingleArt(aArt) {
+  hideLoader();
   console.log("aArt")
 
   document.querySelector(".title-more").innerHTML = aArt.title.rendered;
@@ -24,10 +26,5 @@ function showSingleArt(aArt) {
   } else {
     document.querySelector(".img-more").setAttribute("src", aArt._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
   };
-
-
-
-
-
 
 }

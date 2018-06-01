@@ -484,16 +484,17 @@ textarea {
 /*form ends*/
 
 .thanks {
-  background-color: rgba(252, 209, 247, 1)
+  position: relative;
+  background-color: rgba(252, 209, 247, 1);
+  padding: 8em 3em;
 }
 
 .thanks div p {
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 0px 20px;
-  margin-top: 70px;
 }
 
-.thanks img {
+.signed {
   width: 60vw;
   position: relative;
   left: 15vw;
@@ -551,11 +552,20 @@ iframe {
 }
 
 @media (min-width: 480px) {
+  .thanks {
+    padding: 8em 5em;
+  }
+  .signed {
+    width: 40vw;
+  }
   .artworkimg {
     width: 40vw;
   }
   .subrgrid {
     padding: 2em;
+  }
+  .menulogo {
+    width: 15vw;
   }
   .menulogo {
     width: 15vw;
@@ -574,6 +584,9 @@ iframe {
 }
 
 @media (min-width: 768px) {
+  .thanks {
+    padding: 8em 10em;
+  }
   .artworkimg {
     width: 30vw;
   }
@@ -589,9 +602,66 @@ iframe {
   }
   @keyframes hithere {
     100% {
-      transform: translateY(-10vh) translateX(-10vw) rotate(-30deg);
+      transform: translateY(-10vh) translateX(-15vw) rotate(-30deg);
     }
   }
+  .bye {
+    z-index: -1;
+    top: -10vh;
+    position: absolute;
+    animation: byeee 2s linear infinite;
+  }
+  .o {
+    width: 15vw;
+  }
+  .t {
+    width: 3vw;
+    animation-delay: .5s;
+    left: 10vw
+  }
+  .th {
+    width: 5vw;
+    animation-delay: 1s;
+    left: 30vw;
+  }
+  .f {
+    width: 4vw;
+    animation-delay: 1.5s;
+    left: 50vw;
+  }
+  .fi {
+    width: 8vw;
+    animation-delay: 2s;
+    left: 70vw;
+  }
+  .s {
+    width: 7vw;
+    animation-delay: 2.5s;
+    left: 90vw;
+  }
+  @keyframes byeee {
+    0% {
+      transform: rotate(0deg) translate(0);
+    }
+    25% {
+      transform: translateY(25vh) rotate(360deg);
+    }
+    50% {
+      transform: translateY(50vh) rotate(490deg);
+    }
+    75% {
+      transform: translateY(80vh) rotate(550deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(690deg)
+    }
+  }
+  /*from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }*/
   .subgrid {
     padding: 2em;
     grid-gap: 1em;
@@ -608,6 +678,7 @@ iframe {
   }
   div.form {
     width: 40vw;
+    margin-bottom: 3em;
   }
   .logo {
     width: 50vw;
@@ -718,6 +789,15 @@ iframe {
 @media (min-width: 1024px) {
   .artworkimg {
     width: 25vw;
+  }
+  .thanks {
+    padding: 8em 15em;
+  }
+  .signed {
+    width: 30vw;
+  }
+  .artworkimg {
+    width: 22vw;
   }
   #gallerylist {
     column-count: 3;
