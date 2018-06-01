@@ -12,7 +12,7 @@ $body = $_POST['message'];
 $subject = 'New Enquiry';
 
 $message = "New enquiry from " . $name . " (". $email ."): " . $body; //input subject
-$headers = 'From: hello@annabellegoldsworthy.com' . "\r\n" . //why do we put in our email here? or do we need to?
+$headers = 'From: hello@annabellegoldsworthy.com' . "\r\n" .
     'Reply-To: hello@annabellegoldsworthy.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
