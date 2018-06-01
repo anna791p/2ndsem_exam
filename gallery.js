@@ -83,8 +83,12 @@ function showSinglePiece(aPiece) {
     // console.log('mouseout recentItem: ', recentItem);
     handleProjectItemHover(recentItem, 'none');
   });
+  if (aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.large) {
+    clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url)
+  } else {
+    clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
+  };
 
-  clone.querySelector(".artworkimg").setAttribute("src", aPiece._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
   let gallerylist = document.querySelector("#gallerylist");
 
