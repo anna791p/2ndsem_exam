@@ -194,6 +194,7 @@ footer p {
   border-right: 20px solid transparent;
   border-top: 30px solid rgba(252, 209, 247);
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.23));
+  cursor: pointer;
 }
 
 @keyframes down {

@@ -28,3 +28,7 @@ function showSingleArt(aArt) {
   };
 
 }
+
+function goBack() {
+  window.history.back();
+}
