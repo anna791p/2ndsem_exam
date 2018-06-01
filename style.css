@@ -381,7 +381,7 @@ li a:hover,
 }
 
 #anim,
-#anim-mobile {
+#anim-mobile, #anim-tablet {
   /* position: absolute;
   top: 0;
   left: 0; */
@@ -389,7 +389,7 @@ li a:hover,
   opacity: .5;
 }
 
-#anim {
+#anim, #anim-tablet{
   display: none;
 }
 
@@ -755,10 +755,10 @@ width:30vw;
   .gridimg {
     width: 100%;
   }
-  #anim {
+  #anim-tablet {
     display: initial;
   }
-  #anim-mobile {
+  #anim-mobile, #anim {
     display: none;
   }
   ul.tags {
@@ -776,6 +776,12 @@ width:30vw;
 }
 
 @media (min-width: 1024px) {
+
+  #anim {
+    display: initial;
+  }
+    #anim-mobile, #anim-tablet {
+        display: none;}
     .thanks {
   padding: 8em 15em;
 }
