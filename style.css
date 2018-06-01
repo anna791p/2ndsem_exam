@@ -605,7 +605,7 @@ width:30vw;
   }
     .bye{
         z-index: -1;
-        top: -10vh;
+        top: -15vh;
         position: absolute;
         animation: byeee 2s linear infinite;
     }
@@ -762,13 +762,17 @@ width:30vw;
     display: none;
   }
   ul.tags {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    text-align: center;
+    position: fixed;
+    top:20vh;
+    left:0;
+max-height: 70vh;
   }
+    .tags li{
+        padding: .7em 0;
+    }
   #gallerylist {
-    margin: 3em 10em 5em 10em;
-    column-gap: 1em;
+    margin: 3em 3em 8em 23em;
+    column-gap: .6em;
   }
   .title-more {
     grid-column: 1/-1;
@@ -783,7 +787,7 @@ width:30vw;
     #anim-mobile, #anim-tablet {
         display: none;}
     .thanks {
-  padding: 8em 15em;
+  padding: 8em 20em;
 }
     .signed{
         width: 30vw;
