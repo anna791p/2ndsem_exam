@@ -8,6 +8,43 @@
   src: url(fonts/printclearly.otf)
 }
 
+/* W3 schools, https://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin: 0 0 5px -60px;
+    background-color: #1c3652;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1c3652 transparent transparent transparent;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -94,11 +131,13 @@ p {
 .deskmenu {
   display: none;
 }
-
-ul>li {
+ ul>li {
   list-style-type: none;
-  text-transform: uppercase;
-  line-height: 30px;
+text-transform: uppercase;
+}
+
+.appbar ul>li {
+  line-height: 50px;
   font-size: 1.3em;
 }
 
@@ -140,7 +179,7 @@ footer p {
 
 .appbar {
   width: 100vw;
-  height: 60px;
+  height: 40px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -243,6 +282,7 @@ footer p {
 }
 
 .menu {
+    line-height: 30px;
   width: 100vw;
   height: 150px;
   top: 50px;
@@ -291,7 +331,7 @@ footer p {
 
 .menulogo {
   width: 20vw;
-  top: 0;
+  top: 1vh;
   margin-left: 10px;
   position: absolute;
 }
@@ -326,7 +366,7 @@ footer p {
   width: 100%;
   text-align: center;
   position: relative;
-  box-shadow: 0px 10px 16px rgba(68, 68, 68, 0.2);
+  /*box-shadow: 0px 10px 16px rgba(68, 68, 68, 0.2);*/
 }
 
 .hover_content {
@@ -384,7 +424,7 @@ li a:hover,
 }
 
 #anim,
-#anim-mobile {
+#anim-mobile, #anim-tablet {
   /* position: absolute;
   top: 0;
   left: 0; */
@@ -392,7 +432,7 @@ li a:hover,
   opacity: .5;
 }
 
-#anim {
+#anim, #anim-tablet{
   display: none;
 }
 
@@ -567,10 +607,9 @@ iframe {
   }
   .menulogo {
     width: 15vw;
+      top:1vh;
   }
-  .menulogo {
-    width: 15vw;
-  }
+
   #gallerylist {
     column-count: 2;
     column-gap: 1em;
@@ -585,6 +624,13 @@ iframe {
 }
 
 @media (min-width: 768px) {
+
+    .appbar {
+        height: 60px;
+    }
+    ul>li {
+        line-height: 50px;}
+
   .thanks {
     padding: 8em 10em;
   }
@@ -606,6 +652,7 @@ iframe {
       transform: translateY(-10vh) translateX(-15vw) rotate(-30deg);
     }
   }
+
   .bye {
     z-index: -1;
     top: -10vh;
@@ -721,7 +768,7 @@ iframe {
     font-size: 1.3em;
   }
   .menulogo {
-    width: 8vw;
+    width: 10vw;
   }
   .menuIcon,
   .menu {
@@ -767,20 +814,24 @@ iframe {
   .gridimg {
     width: 100%;
   }
-  #anim {
+  #anim-tablet {
     display: initial;
   }
-  #anim-mobile {
+  #anim-mobile, #anim {
     display: none;
   }
   ul.tags {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    text-align: center;
+    position: fixed;
+    top:20vh;
+    left:0;
+max-height: 70vh;
   }
+    .tags li{
+        padding: .7em 0;
+    }
   #gallerylist {
-    margin: 3em 10em 5em 10em;
-    column-gap: 1em;
+    margin: 3em 3em 8em 23em;
+    column-gap: .6em;
   }
   .title-more {
     grid-column: 1/-1;
@@ -788,9 +839,22 @@ iframe {
 }
 
 @media (min-width: 1024px) {
-  .artworkimg {
-    width: 25vw;
+    .menulogo {
+    width: 8vw;
+        top:0;
   }
+  #anim {
+    display: initial;
+  }
+    #anim-mobile, #anim-tablet {
+        display: none;}
+    .thanks {
+  padding: 8em 20em;
+}
+    .signed{
+        width: 30vw;
+    }
+
   .thanks {
     padding: 8em 15em;
   }
