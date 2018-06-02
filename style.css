@@ -209,6 +209,7 @@ footer {
   /* padding: 1em; */
 }
 
+
 .icons {
      width: 50px;
     display: inline;
@@ -610,12 +611,19 @@ textarea {
   margin: 0 10em;
 }
 
-.column_grid>p {
-  margin: 1em 0 1em 1em;
-  align-self: center;
+.inline{
+    font-size: 1.5em;
+    font-family: 'jaapokki';
+    display: inline;
 }
-
+.textytext{
+    margin: 10vw 0 10vw 20vw;
+}
+.texty{
+    margin: 10vw 20vw 10vw 0;
+}
 iframe {
+    align-self: center;
   width: 100%;
 }
 
@@ -699,7 +707,7 @@ iframe {
     z-index: -1;
     position: absolute;
     width: 25%;
-    top: 30vh;
+    top: 50vh;
     left: 15vw;
     animation: hithere 1s ease-out forwards 1.5s;
     overflow: hidden;
@@ -842,6 +850,20 @@ iframe {
     grid-template-columns: 2fr 2fr;
     grid-gap: 1em;
   }
+    .column_grid>p{
+           align-self: end;
+    }
+    .textytext{
+    margin: 3vh 0 3vh 10vw;
+}
+
+.texty{
+    margin: 3vh 8vw 3vh 2vw;
+}
+    .tex{
+        grid-row: 3;
+        grid-column: 2;
+    }
   footer {
     height: 96px;
   }
@@ -888,7 +910,7 @@ line-height: 12px;
         padding: .7em 0;
     }
   #gallerylist {
-    margin: 3em 3em 8em 20em;
+    margin: 3em 3em 8em 15em;
     column-gap: .6em;
   }
   .title-more {
@@ -897,6 +919,10 @@ line-height: 12px;
 }
 
 @media (min-width: 1024px) {
+    .hi {
+    width: 25%;
+    top: 35vh;
+  }
     .menulogo {
     width: 8vw;
         top:0;
@@ -923,6 +949,7 @@ line-height: 12px;
     width: 22vw;
   }
   #gallerylist {
+       margin: 3em 3em 8em 20em;
     column-count: 3;
   }
   .intouch {
