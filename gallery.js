@@ -96,3 +96,15 @@ function showSinglePiece(aPiece) {
 
   gallerylist.appendChild(clone);
 }
+
+let btn = document.querySelector(".showbtn");
+let showhide = document.querySelector(".tags")
+
+    btn.addEventListener("click", showTags)
+    function showTags(){
+        if (showhide.style.display === "none") {
+    showhide.style.display = "block";
+    } else {
+        showhide.style.display = "none";
+    }
+    }
