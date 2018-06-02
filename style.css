@@ -39,9 +39,9 @@
 
 .showbtn, .tags{
     /*background-color: #bfe8ff;*/
-    width: 30vw;
-    padding: 0 5px 0 5px;
-        margin: 3vh 35vw 0;
+    width: 60vw;
+        padding: 0 5px 0 5px;
+    margin: 3vh 20vw 0;
 }
 .showbtn{
    font-family: 'print clearly';
