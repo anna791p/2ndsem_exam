@@ -224,9 +224,9 @@ footer {
 }
 
 .icons {
-  /* width: 50px; */
-  display: inline;
-  /* justify-self: end; */
+  width: 30%;
+  height: auto;
+  justify-self: end;
   padding: 1em 0 0 0;
 }
 
