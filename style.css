@@ -66,6 +66,12 @@
   display: inline-block;
 }
 
+iframe {
+  width: 420px;
+  height: 315px;
+  border-width: 0px;
+}
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
