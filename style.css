@@ -440,13 +440,12 @@ footer {
   bottom: 0;
 }
 
-.medium {
-  font-size: 1.2em;
-}
+
 
 .title,
 .medium {
   color: white;
+    font-size: 1em;
 }
 
 .text {
@@ -697,6 +696,12 @@ iframe {
 }
 
 @media (min-width: 768px) {
+    .title{
+    font-size: 2em;
+}
+    .medium {
+  font-size: 1.2em;
+}
   .tags {
     display: inline-block;
     background: none;
