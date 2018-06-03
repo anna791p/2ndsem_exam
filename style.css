@@ -900,7 +900,7 @@ iframe {
   .icons {
     width: 100px;
     height: auto;
-    /* justify-self: end; */
+    justify-self: end;
     padding: 1em 3em;
   }
   .contact {
