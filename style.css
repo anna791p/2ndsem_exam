@@ -8,6 +8,7 @@
   src: url(fonts/printclearly.otf)
 }
 
+
 .button {
   margin: 5vh 15vw 0 15vw;
 }
@@ -353,7 +354,7 @@ footer {
 }
 
 .menu.hidden {
-  transform: translateX(110vw);
+  transform: translateY(-100vh);
 }
 
 .menuIcon {
@@ -485,13 +486,12 @@ li a:hover,
 #anim,#anim-mobile,
 #anim-tablet
   {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   width: 100%;
   opacity: .5;
 }
-
+#anim-mobile{
+    height: 100vh;
+}
 #anim,
 #anim-tablet {
   display: none;
