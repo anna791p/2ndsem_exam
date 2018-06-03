@@ -939,7 +939,8 @@ iframe {
     top: 20vh;
     left: 0;
     line-height: 12px;
-    z-index: -5;
+    width: 15vw;
+    /* z-index: -5; */
   }
   .tags li {
     padding: .7em 0;
@@ -987,6 +988,7 @@ iframe {
   #gallerylist {
     margin: 3em 3em 8em 20em;
     column-count: 3;
+    min-height: 50vh;
   }
   .intouch {
     padding: 0em 4.5em 0.1em 4.5em;
