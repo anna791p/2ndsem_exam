@@ -483,7 +483,7 @@ li a:hover,
 #anim-mobile,
 #anim-tablet {
   opacity: .5;
-  width: 100vw;
+  width: 100%;
 }
 
 #anim,
