@@ -410,7 +410,7 @@ footer {
   color: #1C3652;
   text-transform: lowercase;
   top: 40vh;
-  left: 40vw;
+  left: 30vw;
   font-size: 3em;
 }
 
@@ -488,7 +488,8 @@ li a:hover,
   /* position: absolute;
   top: 0;
   left: 0; */
-  width: 100%;
+  width: 100vw;
+    height: 100vh;
   opacity: .5;
 }
 
