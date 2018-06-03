@@ -100,11 +100,20 @@ function showSinglePiece(aPiece) {
 let btn = document.querySelector(".showbtn");
 let showhide = document.querySelector(".tags")
 
-    btn.addEventListener("click", showTags)
-    function showTags(){
-        if (showhide.style.display === "none") {
-    showhide.style.display = "block";
-    } else {
-        showhide.style.display = "none";
-    }
-    }
+btn.addEventListener("click", showTags)
+
+function showTags() {
+
+  if (showhide.classList.contains("hide")) {
+    showhide.classList.remove("hide");
+  } else {
+    showhide.classList.add("hide");
+  }
+
+
+  // if (showhide.style.display === "none") {
+  //   showhide.style.display = "block";
+  // } else {
+  //   showhide.style.display = "none";
+  // }
+}
