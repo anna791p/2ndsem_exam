@@ -235,7 +235,7 @@ footer {
 }
 
 .appbar {
-  width: 100vw;
+  width: 100%;
   height: 40px;
   top: 0;
   left: 0;
@@ -263,7 +263,7 @@ footer {
 .dot {
   animation: down 2.5s ease infinite;
   position: absolute;
-  top: 85vh;
+  top: 65vh;
   left: 45vw;
   width: 0;
   height: 0;
@@ -343,7 +343,7 @@ footer {
 
 .menu {
   line-height: 30px;
-  width: 100vw;
+  width: 100%;
   height: 150px;
   top: 50px;
   left: 0;
@@ -440,12 +440,10 @@ footer {
   bottom: 0;
 }
 
-
-
 .title,
 .medium {
   color: white;
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .text {
@@ -482,14 +480,15 @@ li a:hover,
   /*text-decoration: underline;*/
 }
 
-#anim,
-#anim-mobile,
-#anim-tablet {
+
+
+#anim,#anim-mobile,
+#anim-tablet
+  {
   /* position: absolute;
   top: 0;
   left: 0; */
-  width: 100vw;
-    height: 100vh;
+  width: 100%;
   opacity: .5;
 }
 
@@ -615,7 +614,7 @@ textarea {
 }
 
 #recentpiece {
-  margin: 3em 8em 8em 8em;
+  margin: 3em 5em 5em 5em;
   text-align: center;
 }
 
@@ -663,7 +662,8 @@ iframe {
 }
 
 .artworkimg {
-  width: 50vw;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: 480px) {
@@ -673,9 +673,9 @@ iframe {
   .signed {
     width: 40vw;
   }
-  .artworkimg {
+ /* .artworkimg {
     width: 40vw;
-  }
+  }*/
   .subrgrid {
     padding: 2em;
   }
@@ -697,12 +697,14 @@ iframe {
 }
 
 @media (min-width: 768px) {
-    .title{
+    .dot {
+        top:85vh;}
+  .title {
     font-size: 2em;
-}
-    .medium {
-  font-size: 1.2em;
-}
+  }
+  .medium {
+    font-size: 1.2em;
+  }
   .tags {
     display: inline-block;
     background: none;
@@ -719,9 +721,9 @@ iframe {
   .thanks {
     padding: 8em 10em;
   }
-  .artworkimg {
+  /*.artworkimg {
     width: 30vw;
-  }
+  }*/
   .hi {
     display: initial;
     z-index: -1;
@@ -841,6 +843,7 @@ iframe {
     grid-template-columns: 2fr 2fr 2fr;
     /* justify-items: center; */
     grid-gap: 1em;
+      margin:1em;
   }
   .size {
     width: 30vw;
@@ -988,9 +991,9 @@ iframe {
   .signed {
     width: 30vw;
   }
-  .artworkimg {
+  /*.artworkimg {
     width: 22vw;
-  }
+  }*/
   #gallerylist {
     margin: 3em 3em 8em 20em;
     column-count: 3;
